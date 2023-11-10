@@ -1,6 +1,5 @@
 import React from 'react';
 import HomePage from '../pages/HomePage';
-
 import AddPage from '../pages/AddPage';
 import { Route, Routes } from 'react-router-dom';
 import CatalogPage from '../pages/CatalogPage';

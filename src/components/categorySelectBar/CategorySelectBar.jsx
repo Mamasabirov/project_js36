@@ -9,8 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function CategorySelectBar() {
   return (
-    <Box>
-      <AppBar position="sticky">
+      <AppBar position='sticky'>
         <Toolbar>
           <IconButton
             size="large"
@@ -27,6 +26,5 @@ export default function CategorySelectBar() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </Box>
   );
 }

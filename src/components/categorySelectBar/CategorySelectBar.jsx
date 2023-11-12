@@ -7,23 +7,23 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
+const categories = [
+  {id: 1, title: 'Телефоны'},
+  {id: 2, title: 'Ноутбуки'},
+  {id: 3, title: 'Аксессуары'},
+  {id: 4, title: 'Приставки'},
+  
+]
+
 export default function CategorySelectBar() {
   return (
-      <AppBar position='sticky'>
+      <AppBar sx={{backgroundColor: 'black'}} position='sticky'>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
+              {categories.map((category) => 
+                <Button sx={{color: "white"}} key={category.id}>
+                  {category.title}
+                  </Button>
+              )}
         </Toolbar>
       </AppBar>
   );

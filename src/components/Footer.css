@@ -1,0 +1,12 @@
+.btn:hover {
+  background: orange !important;
+}
+
+.image {
+  display: flex;
+  width: 2.5%;
+  height: 2.5%;
+  gap: 10px;
+  margin-top: 88rem;
+  margin-left: 16%;
+}

@@ -9,7 +9,7 @@ const ProductList = () => {
         getProducts()
     }, [])
     return (
-        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', width: '75%', margin: 'auto'}}>
             {products.map((item) =>          
                   <ProductCard item={item}/>
             )}

@@ -12,15 +12,14 @@ const categories = [
   {id: 2, title: 'Ноутбуки'},
   {id: 3, title: 'Аксессуары'},
   {id: 4, title: 'Приставки'},
-  
 ]
 
 export default function CategorySelectBar() {
   return (
       <AppBar sx={{backgroundColor: 'black'}} position='sticky'>
-        <Toolbar>
+        <Toolbar >
               {categories.map((category) => 
-                <Button sx={{color: "white"}} key={category.id}>
+                <Button sx={{color: "white", marginX: {sx: '20px', md: '70px'}}} key={category.id}>
                   {category.title}
                   </Button>
               )}

@@ -1,10 +1,25 @@
 {
   "products": [
     {
-      "title": "Iphone 10",
-      "description": "Some phone",
-      "price": 700,
+      "title": "dsnfndslfnsadas",
+      "description": "dsfsdfsd",
+      "image": "https://www.helikon-tex.com/media/catalog/product/cache/4/image/500x/17f82f742ffe127f42dca9de82fb58b1/t/s/ts-tsh-co-11.jpg",
+      "price": 234234,
       "id": 1
+    },
+    {
+      "title": "343",
+      "description": "dsfsdfwer",
+      "image": "https://www.helikon-tex.com/media/catalog/product/cache/4/image/500x/17f82f742ffe127f42dca9de82fb58b1/t/s/ts-tsh-co-11.jpg",
+      "price": 2342,
+      "id": 2
+    },
+    {
+      "title": "3434",
+      "description": "dsfsdfwer",
+      "image": "https://www.helikon-tex.com/media/catalog/product/cache/4/image/500x/17f82f742ffe127f42dca9de82fb58b1/t/s/ts-tsh-co-11.jpg",
+      "price": 2342,
+      "id": 3
     }
   ]
 }

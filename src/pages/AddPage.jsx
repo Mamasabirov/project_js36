@@ -1,9 +1,10 @@
 import React from 'react';
+import AddProduct from '../components/product/AddProduct';
 
 const AddPage = () => {
     return (
         <div>
-            AddPage
+           <AddProduct/>
         </div>
     );
 };

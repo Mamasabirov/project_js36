@@ -43,7 +43,9 @@ function Navbar() {
     <AppBar sx={{backgroundColor: 'white'}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+            <Link to={'/'}>
             <img width={50} src={require('../assets/747.png')} alt="" />
+            </Link>
           <Typography
             variant="h6"
             noWrap
@@ -58,7 +60,9 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-           SOME TITLE
+            <Link style={{textDecoration: 'none'}} to={'/'}>         
+              SOME TITLE
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -117,7 +121,7 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-                <Link key={page.id} to={page.link}>
+                <Link  style={{textDecoration: 'none'}} key={page.id} to={page.link}>
                 <Button
                 key={page.id}
                 onClick={handleCloseNavMenu}

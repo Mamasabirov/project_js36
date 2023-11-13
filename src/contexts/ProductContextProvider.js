@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 import { ACTIONS, API_PRODUCTS } from '../helpers/consts';
 import axios from 'axios';
 export const productContext = createContext()
@@ -18,11 +18,22 @@ const reducer = (state=INIT_STATE, action) => {
 }
    
 const ProductContextProvider = ({children}) => {
+    const [state, dispatch] = useReducer(reducer, INIT_STATE)
+
     const addProduct = async(newProduct) => {
         await axios.post(API_PRODUCTS, newProduct)
     }
+    
+      const getProducts = async () => {
+    const result = await axios.get(`${API_PRODUCTS}${window.location.search}`);
+    dispatch({ type: ACTIONS.GET_PRODUCTS, payload: result.data });
+  };
+
+
     const values = {
-        addProduct
+        addProduct,
+        getProducts,
+        products: state.products
 }
     return (
        <productContext.Provider value={values}>{children}</productContext.Provider>

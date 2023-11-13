@@ -29,7 +29,6 @@ const ProductContextProvider = ({children}) => {
     dispatch({ type: ACTIONS.GET_PRODUCTS, payload: result.data });
   };
 
-
     const values = {
         addProduct,
         getProducts,

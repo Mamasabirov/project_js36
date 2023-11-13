@@ -4,7 +4,7 @@ import ProductList from '../components/product/ProductList';
 
 const CatalogPage = () => {
     return (
-        <div style={{height: 2000}}>
+        <div>
             <CategorySelectBar/>
             <ProductList/>
         </div>

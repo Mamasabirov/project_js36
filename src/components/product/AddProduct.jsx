@@ -7,6 +7,7 @@ const AddProduct = () => {
     const [product, setProduct] = useState({
         title: '',
         description: '',
+        image: '',
         price: ''
     })
 
@@ -23,6 +24,7 @@ const AddProduct = () => {
         <Box sx={{width: '70%', margin: 'auto'}}>
             <TextField onChange={handleInput} name='title' label="Title" fullWidth variant="outlined" />
             <TextField onChange={handleInput} name='description' label="Description" fullWidth variant="outlined" />
+            <TextField onChange={handleInput} name='image' label="Image URL" fullWidth variant="outlined" />
             <TextField onChange={handleInput} name='price' label="Price" fullWidth variant="outlined" />
             <Button onClick={()=>addProduct(product)}>Add Product</Button>
         </Box>

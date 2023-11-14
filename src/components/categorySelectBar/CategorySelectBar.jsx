@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useProducts } from '../../contexts/ProductContextProvider';
+import { useSearchParams } from 'react-router-dom';
+import { TextField } from '@mui/material';
 
 const categories = [
   {id: 1, title: 'Телефоны'},
@@ -14,12 +17,31 @@ const categories = [
   {id: 4, title: 'Приставки'},
 ]
 
+
 export default function CategorySelectBar() {
+  const {fetchByParams} = useProducts()
+  const [searchParams, setSearchParams] = useSearchParams()
+    const [search, setSearch] = React.useState(searchParams.get('q') || '');
+
+    React.useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
   return (
-      <AppBar sx={{backgroundColor: 'black'}} position='sticky'>
+      <AppBar sx={{backgroundColor: 'black', color: 'white'}} position='sticky'>
         <Toolbar >
+              <TextField
+              sx={{input: {color: 'white'}, backgroundColor: 'gray', borderRadius: '5px'}}
+              onChange={(e)=>setSearch(e.target.value)}
+              value={search}
+              label='Search'
+              variant='filled'
+              color='secondary'
+              
+              />
               {categories.map((category) => 
-                <Button sx={{color: "white", marginX: {sx: '20px', md: '70px'}}} key={category.id}>
+                <Button  onClick={() => fetchByParams('category', category.title)} sx={{color: "white", marginX: {sx: '20px', md: '70px'}}} key={category.id}>
                   {category.title}
                   </Button>
               )}

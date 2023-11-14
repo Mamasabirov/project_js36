@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import PersonIcon from '@mui/icons-material/Person';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -15,6 +16,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
+
 
 
 
@@ -113,7 +115,7 @@ function Navbar() {
                 </Link>
               ))}
               {email === ADMIN ? (
-                <Link to={'/add'}>
+                <Link to={'/add'} >
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">Добавить продукт</Typography>
                   </MenuItem>
@@ -165,12 +167,12 @@ function Navbar() {
             ) : null}
           </Box>
           <Typography sx={{ color: 'black' }}>
-              {email ? `Salam, ${email.split('@')[0].charAt(0).toUpperCase() + email.split('@')[0].slice(1)}!` : 'Salam, Гость!'}
+              {email ? `Добро пожаловать, ${email.split('@')[0].charAt(0).toUpperCase() + email.split('@')[0].slice(1)}!` : 'Здравствуйте, Гость!'}
           </Typography>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip >
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <PersonIcon sx={{ fontSize: 32, borderRadius: 10, color: 'white', backgroundColor: 'black'}} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -196,12 +198,12 @@ function Navbar() {
                     handleCloseUserMenu();
                   }}
                 >
-                  <Typography textAlign="center">Logout</Typography>
+                  <Typography textAlign="center">Выйти</Typography>
                 </MenuItem>
               ) : (
-                <Link to={'/auth'}>
+                <Link to={'/auth'} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">Login</Typography>
+                    <Typography textAlign="center">Вход/Регистрация</Typography>
                   </MenuItem>
                 </Link>
               )}

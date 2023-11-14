@@ -4,9 +4,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { useSearchParams } from 'react-router-dom';
 
 export default function CategorySelect({handleInput, product}) {
   const [category, setCategory] = React.useState('');
+  
 
 
   return (

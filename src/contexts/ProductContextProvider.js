@@ -47,6 +47,19 @@ const ProductContextProvider = ({children}) => {
     navigate('/products');
   };
    
+  const fetchByParams = (query, value) => {
+    const search = new URLSearchParams(window.location.search);
+
+    if (value === 'all') {
+      search.delete(query);
+    } else {
+      search.set(query, value);
+    }
+
+    const url = `${window.location.pathname}?${search.toString()}`;
+    navigate(url);
+  };
+
 
     const values = {
         addProduct,
@@ -56,8 +69,8 @@ const ProductContextProvider = ({children}) => {
         deleteProduct,
         oneProduct: state.oneProduct,
         getOneProduct,
-        saveChanges
-
+        saveChanges,
+        fetchByParams
 }
     return (
        <productContext.Provider value={values}>{children}</productContext.Provider>

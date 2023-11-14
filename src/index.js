@@ -6,17 +6,16 @@ import { BrowserRouter } from "react-router-dom";
 import ProductContextProvider from "./contexts/ProductContextProvider";
 import { ThemeProvider } from "@emotion/react";
 import { THEME } from "./helpers/consts";
+import AuthContextProvider from "./contexts/AuthContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-  <ProductContextProvider>
-    <ThemeProvider theme={THEME}>
-      <App />
-    </ThemeProvider>
- 
-  </ProductContextProvider>
-    
+    <AuthContextProvider>
+      <ProductContextProvider>
+        <App />
+      </ProductContextProvider>
+    </AuthContextProvider>  
   </BrowserRouter>
     
 );

@@ -12,15 +12,26 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
+import './Navbar.css'
+import { useAuth } from '../contexts/AuthContextProvider';
+import { ADMIN } from '../helpers/consts';
+
+
 
 
 const pages = [
   { id: 1, title: 'Каталог', link: '/products' },
   { id: 2, title: 'Контактная информация', link: '/contact' },
-  { id: 2, title: 'Добавить продукт', link: '/add' },
 ];
 
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 function Navbar() {
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   
@@ -61,11 +72,11 @@ function Navbar() {
             }}
           >
             <Link style={{textDecoration: 'none'}} to={'/'}>         
-              SOME TITLE
+              Asia Store
             </Link>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box  sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -95,10 +106,19 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
+                <Link key={page.id} to={page.link}>
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
                   <Button textAlign="center"><b>{page.title}</b></Button>
                 </MenuItem>
+                </Link>
               ))}
+              {email === ADMIN ? (
+                <Link to={'/add'}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">Добавить продукт</Typography>
+                  </MenuItem>
+                </Link>
+              ) : null}
             </Menu>
           </Box>
           <Typography
@@ -117,22 +137,36 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            
+            LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{  flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
                 <Link  style={{textDecoration: 'none'}} key={page.id} to={page.link}>
                 <Button
                 key={page.id}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', fontWeight: 700 }}
+                className='btn-nav'
+                sx={{ my: 2, borderRadius: '20px', backgroundColor:'black', color: 'lightgray', display: 'block', fontWeight: 700, marginLeft: 5, }}
               >
                 {page.title}
               </Button>
                 </Link>
             ))}
+            {email === ADMIN ? (
+              <Link style={{textDecoration: 'none'}} to={'/add'}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  className='btn-nav'
+                  sx={{my: 2, borderRadius: '20px', backgroundColor:'black', color: 'lightgray', display: 'block', fontWeight: 700, marginLeft: 5,  }}
+                >
+                  Добавить продукт
+                </Button>
+              </Link>
+            ) : null}
           </Box>
-
+          <Typography sx={{ color: 'black' }}>
+              {email ? `Salam, ${email.split('@')[0].charAt(0).toUpperCase() + email.split('@')[0].slice(1)}!` : 'Salam, Гость!'}
+          </Typography>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -155,7 +189,22 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              
+              {email ? (
+                <MenuItem
+                  onClick={() => {
+                    handleLogout();
+                    handleCloseUserMenu();
+                  }}
+                >
+                  <Typography textAlign="center">Logout</Typography>
+                </MenuItem>
+              ) : (
+                <Link to={'/auth'}>
+                  <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">Login</Typography>
+                  </MenuItem>
+                </Link>
+              )}
             </Menu>
           </Box>
         </Toolbar>

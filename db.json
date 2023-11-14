@@ -7,6 +7,14 @@
       "image": "23432",
       "price": 23423,
       "id": 1
+    },
+    {
+      "title": "azaz",
+      "description": "za",
+      "category": "Ноутбуки",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYV2jpX8c6gBp8fAWP2SXzkNNqIkOCgoZMA&usqp=CAU",
+      "price": 222,
+      "id": 2
     }
   ]
 }

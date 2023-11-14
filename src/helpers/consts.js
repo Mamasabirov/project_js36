@@ -4,3 +4,5 @@ export const ACTIONS = {
 }
 export const API_PRODUCTS = 'http://localhost:8000/products'
 
+
+export const ADMIN = 'admin@admin.com';

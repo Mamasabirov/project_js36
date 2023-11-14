@@ -3,36 +3,27 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useAuth } from '../../contexts/AuthContextProvider';
+import PersonIcon from '@mui/icons-material/Person';
 
 function Copyright(props) {
   return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://asiastore.kg//">
+        Asia Store
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
 }
-
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
@@ -41,15 +32,12 @@ export default function Auth() {
     user,
     email,
     password,
-
     emailError,
     passwordError,
     hasAccount,
-
     setEmail,
     setPassword,
     setHasAccount,
-
     handleRegister,
     handleLogin,
   } = useAuth();
@@ -63,6 +51,14 @@ export default function Auth() {
     });
   };
 
+
+  const [showLoginForm, setShowLoginForm] = React.useState(true);
+
+
+  const toggleForm = () => {
+    setShowLoginForm((prev) => !prev);
+  };
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
@@ -73,20 +69,30 @@ export default function Auth() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            borderRadius: '10px',
+            overflow: 'hidden',
+            boxShadow: '5px 20px 50px #000',
+            height: '400px',
+            perspective: '1000px', 
+            transformStyle: 'preserve-3d',
+            transition: 'transform 0.6s ease-in-out',
+            transform: showLoginForm ? 'rotateY(0deg)' : 'rotateY(360deg)',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+          <Avatar sx={{ m: 1, bgcolor: 'black' }}>
+            <PersonIcon sx={{color: 'white'}} />
           </Avatar>
-
-          <Typography component="h1" variant="h5">
-            {hasAccount ? 'Login Form' : 'Register Form'}
+          <Typography component="h1" variant="h5" >
+            {showLoginForm ? 'Login Form' : 'Register Form'}
           </Typography>
           <Box
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ mt: 1 }}
+            sx={{
+              mt: 1,
+              width: '80%',
+            }}
           >
             <TextField
               value={email}
@@ -114,8 +120,7 @@ export default function Auth() {
               id="password"
               autoComplete="current-password"
             />
-
-            {hasAccount ? (
+            {showLoginForm ? (
               <Button
                 type="submit"
                 fullWidth
@@ -123,7 +128,7 @@ export default function Auth() {
                 sx={{ mt: 3, mb: 2 }}
                 onClick={handleLogin}
               >
-                Login
+                Войти
               </Button>
             ) : (
               <Button
@@ -133,21 +138,19 @@ export default function Auth() {
                 sx={{ mt: 3, mb: 2 }}
                 onClick={handleRegister}
               >
-                Register Now
+                Регистрация
               </Button>
             )}
-
             <Grid container>
               <Grid item>
                 <Typography
-                  onClick={() => setHasAccount(!hasAccount)}
+                  onClick={toggleForm}
                   variant="body2"
-                  sx={{ cursor: 'pointer', textDecoration: 'underline' }}
+                  sx={{ cursor: 'pointer', textDecoration: 'underline', color: 'red'}}
                 >
-                  {hasAccount
-                    ? `
-                    Don't have an account? Register Now`
-                    : 'Already have an account? Login'}
+                  {showLoginForm
+                    ? `У вас нету аккаунта? Нажмите сюда`
+                    : 'У вас уже есть аккаунт? Нажмите сюда'}
                 </Typography>
               </Grid>
             </Grid>
@@ -158,3 +161,4 @@ export default function Auth() {
     </ThemeProvider>
   );
 }
+

@@ -3,11 +3,16 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, IconButton } from '@mui/material';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import { useNavigate } from 'react-router';
+import { ADMIN } from '../../helpers/consts';
+import { useAuth } from '../../contexts/AuthContextProvider';
 
 export default function ProductCard({item}) {
+  const {
+    user: { email },
+  } = useAuth();
     const {deleteProduct} = useProducts()
     const navigate = useNavigate()
   return (
@@ -29,8 +34,16 @@ export default function ProductCard({item}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
+          {email === ADMIN ? (
+        <>
         <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
         <Button onClick={()=>deleteProduct(item.id)}>Delete</Button>
+        </> 
+        ) : (
+          <IconButton>
+            
+          </IconButton>
+      )}      
       </CardActions>
     </Card>
   );

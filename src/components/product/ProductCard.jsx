@@ -20,7 +20,7 @@ export default function ProductCard({ item }) {
 
   const navigate = useNavigate();
   return (
-    <Card sx={{ width: 250, margin: "10px" }}>
+    <Card sx={{ width: {lg: '250px', sm: "350px", xs: "500px"}, margin: "10px" }}>
       <CardActionArea>
         <CardMedia
           component="img"

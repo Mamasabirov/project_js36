@@ -90,7 +90,7 @@ function Navbar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="primary"
             >
               <MenuIcon />
             </IconButton>
@@ -191,12 +191,14 @@ function Navbar() {
                   Добавить продукт
                 </Button>
               </Link>
-            ) : null}
-            <Link to={"/cart"}>
+            ) : (
+              <Link style={{marginLeft: "auto", marginTop: "20px", marginRight:'10px'}} to={"/cart"}>
               <Badge badgeContent={badgeCount} color="success">
-                <ShoppingCartIcon sx={{ color: "black" }} />
+                <ShoppingCartIcon sx={{ color: "black"  }} />
               </Badge>
             </Link>
+            )}
+            
           </Box>
           <Typography sx={{ color: "black" }}>
             {email

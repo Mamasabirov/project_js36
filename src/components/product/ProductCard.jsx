@@ -16,11 +16,11 @@ export default function ProductCard({ item }) {
   const { deleteProduct } = useProducts();
   const navigate = useNavigate();
   return (
-    <Card sx={{ width: 250, margin: "10px" }}>
+    <Card sx={{ width: 300, margin: "10px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="300"
           image={item.image}
           alt="green iguana"
         />

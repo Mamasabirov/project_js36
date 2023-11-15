@@ -1,26 +1,31 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useAuth } from '../../contexts/AuthContextProvider';
-import PersonIcon from '@mui/icons-material/Person';
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import PersonIcon from "@mui/icons-material/Person";
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
       <Link color="inherit" href="https://asiastore.kg//">
         Asia Store
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
@@ -46,14 +51,12 @@ export default function Auth() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      email: data.get("email"),
+      password: data.get("password"),
     });
   };
 
-
   const [showLoginForm, setShowLoginForm] = React.useState(true);
-
 
   const toggleForm = () => {
     setShowLoginForm((prev) => !prev);
@@ -66,24 +69,24 @@ export default function Auth() {
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            borderRadius: '10px',
-            overflow: 'hidden',
-            boxShadow: '5px 20px 50px #000',
-            height: '400px',
-            perspective: '1000px', 
-            transformStyle: 'preserve-3d',
-            transition: 'transform 0.6s ease-in-out',
-            transform: showLoginForm ? 'rotateY(0deg)' : 'rotateY(360deg)',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            borderRadius: "10px",
+            overflow: "hidden",
+            boxShadow: "5px 20px 50px #000",
+            height: "400px",
+            perspective: "1000px",
+            transformStyle: "preserve-3d",
+            transition: "transform 0.6s ease-in-out",
+            transform: showLoginForm ? "rotateY(0deg)" : "rotateY(360deg)",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'black' }}>
-            <PersonIcon sx={{color: 'white'}} />
+          <Avatar sx={{ m: 1, bgcolor: "black" }}>
+            <PersonIcon sx={{ color: "white" }} />
           </Avatar>
-          <Typography component="h1" variant="h5" >
-            {showLoginForm ? 'Login Form' : 'Register Form'}
+          <Typography component="h1" variant="h5">
+            {showLoginForm ? "Login Form" : "Register Form"}
           </Typography>
           <Box
             component="form"
@@ -91,7 +94,7 @@ export default function Auth() {
             noValidate
             sx={{
               mt: 1,
-              width: '80%',
+              width: "80%",
             }}
           >
             <TextField
@@ -146,11 +149,15 @@ export default function Auth() {
                 <Typography
                   onClick={toggleForm}
                   variant="body2"
-                  sx={{ cursor: 'pointer', textDecoration: 'underline', color: 'red'}}
+                  sx={{
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                    color: "red",
+                  }}
                 >
                   {showLoginForm
                     ? `У вас нету аккаунта? Нажмите сюда`
-                    : 'У вас уже есть аккаунт? Нажмите сюда'}
+                    : "У вас уже есть аккаунт? Нажмите сюда"}
                 </Typography>
               </Grid>
             </Grid>
@@ -161,4 +168,3 @@ export default function Auth() {
     </ThemeProvider>
   );
 }
-

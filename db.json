@@ -1,22 +1,6 @@
 {
   "products": [
     {
-      "title": "йцу",
-      "description": "32423",
-      "category": "Аксессуары",
-      "image": "23432",
-      "price": 23432,
-      "id": 1
-    },
-    {
-      "title": "234",
-      "description": "23423",
-      "category": "Ноутбуки",
-      "image": "2342",
-      "price": 23423,
-      "id": 2
-    },
-    {
       "title": "23432",
       "description": "423432",
       "category": "Ноутбуки",

@@ -10,8 +10,15 @@ import macbook from "../assets/macb.jpg";
 import ipad from "../assets/ipad.jpg";
 import watch from "../assets/watch.jpg";
 import "./Catalog.css";
+import { useNavigate } from "react-router-dom";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 export default function Catalog() {
+  const navigate = useNavigate()
+  const {setCategoryToNavigate} = useProducts()
+  React.useEffect(()=>{
+    setCategoryToNavigate(false)
+  },[])
   return (
     <div
       style={{
@@ -57,6 +64,9 @@ export default function Catalog() {
             size="small"
             sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
             className="button"
+            onClick={()=>
+              navigate(`products?q=&category=Телефоны`)
+            }
           >
             Выбрать
           </Button>
@@ -100,6 +110,9 @@ export default function Catalog() {
               size="small"
               sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
               className="button"
+              onClick={()=>
+              navigate(`products?q=&category=Ноутбуки`)
+            }
             >
               Выбрать
             </Button>
@@ -145,6 +158,9 @@ export default function Catalog() {
               size="small"
               sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
               className="button"
+              onClick={()=>
+              navigate(`products?q=&category=Аксессуары`)
+            }
             >
               Выбрать
             </Button>
@@ -190,6 +206,9 @@ export default function Catalog() {
               size="small"
               sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
               className="button"
+              onClick={()=>
+              navigate(`products?q=&category=Планшеты`)
+            }
             >
               Выбрать
             </Button>

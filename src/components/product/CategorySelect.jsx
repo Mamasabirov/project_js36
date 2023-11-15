@@ -14,19 +14,19 @@ export default function CategorySelect({handleInput, product}) {
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Choose Category</InputLabel>
+        <InputLabel id="demo-simple-select-label">{product ? product.category : 'Choose category'}</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           name="category"
           onChange={handleInput}
           label="Category"
-          defaultValue={""}
+          defaultValue={product ? product.category : ''}
         >
           <MenuItem value='Телефоны'>Телефоны</MenuItem>
           <MenuItem value='Ноутбуки'>Ноутбуки</MenuItem>
           <MenuItem value='Аксессуары'>Аксессуары</MenuItem>
-          <MenuItem value='Приставки'>Приставки</MenuItem>
+          <MenuItem value='Планшеты'>Планшеты</MenuItem>
         </Select>
       </FormControl>
     </Box>

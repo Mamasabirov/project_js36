@@ -2,6 +2,8 @@ import { Box, Button, Select, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import { useParams, useNavigate } from 'react-router';
+import { Category } from '@mui/icons-material';
+import CategorySelect from './CategorySelect';
 
 const EditProduct = () => {
     const {saveChanges, oneProduct, getOneProduct} = useProducts()
@@ -36,7 +38,7 @@ const EditProduct = () => {
         <Box sx={{ width: '50vw', height: 400, margin: '20px auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <TextField value={product.title} onChange={handleInput} name='title' label="Title" fullWidth variant="outlined" />
             <TextField value={product.description} onChange={handleInput} name='description' label="Description" fullWidth variant="outlined" />
-            <Select/>
+            <CategorySelect product = {product} handleInput={handleInput}/>
             <TextField value={product.image} onChange={handleInput} name='image' label="Image URL" fullWidth variant="outlined" />
             <TextField value={product.price} onChange={handleInput} name='price' label="Price" fullWidth variant="outlined" />
             <Button onClick={()=>{

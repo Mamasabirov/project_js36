@@ -8,6 +8,7 @@ import { useProducts } from '../../contexts/ProductContextProvider';
 import { useNavigate } from 'react-router';
 import { ADMIN } from '../../helpers/consts';
 import { useAuth } from '../../contexts/AuthContextProvider';
+import Detail from './Detail';
 
 export default function ProductCard({item}) {
   const {
@@ -15,6 +16,12 @@ export default function ProductCard({item}) {
   } = useAuth();
     const {deleteProduct} = useProducts()
     const navigate = useNavigate()
+
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
   return (
     <Card sx={{ width: 250, margin: '10px' }}>
       <CardActionArea>
@@ -45,6 +52,17 @@ export default function ProductCard({item}) {
           </IconButton>
       )}      
       </CardActions>
+      <Detail
+        id={item.id}
+        item={item}
+        category={item.category}
+        image={item.image}
+        title={item.title}
+        description={item.description}
+        price={item.price}
+        handleClose={handleClose}
+        open={open}
+      />
     </Card>
   );
 }

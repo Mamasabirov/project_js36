@@ -1,17 +1,22 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-import { useProducts } from '../../contexts/ProductContextProvider';
-import { useNavigate } from 'react-router';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import { useNavigate } from "react-router";
+import { ADMIN } from "../../helpers/consts";
+import { useAuth } from "../../contexts/AuthContextProvider";
 
-export default function ProductCard({item}) {
-    const {deleteProduct} = useProducts()
-    const navigate = useNavigate()
+export default function ProductCard({ item }) {
+  const {
+    user: { email },
+  } = useAuth();
+  const { deleteProduct } = useProducts();
+  const navigate = useNavigate();
   return (
-    <Card sx={{ width: 250, margin: '10px' }}>
+    <Card sx={{ width: 250, margin: "10px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -29,8 +34,14 @@ export default function ProductCard({item}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
-        <Button onClick={()=>deleteProduct(item.id)}>Delete</Button>
+        {email === ADMIN ? (
+          <>
+            <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
+            <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
+          </>
+        ) : (
+          <IconButton></IconButton>
+        )}
       </CardActions>
     </Card>
   );

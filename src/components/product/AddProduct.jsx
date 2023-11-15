@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import { useNavigate } from 'react-router-dom';
 import CategorySelect from './CategorySelect';
+
 const AddProduct = () => {
     const {addProduct} = useProducts()
     const [product, setProduct] = useState({

@@ -102,7 +102,7 @@ export default function Catalog() {
                 },
               }}
               image={macbook}
-              title="IPHONE"
+              title="MACBOOK"
             />
           </CardContent>
           <CardActions sx={{ justifyContent: "flex-end" }}>
@@ -150,7 +150,7 @@ export default function Catalog() {
                 },
               }}
               image={watch}
-              title="IPHONE"
+              title="APPLE WATCH"
             />
           </CardContent>
           <CardActions sx={{ justifyContent: "flex-end" }}>
@@ -198,7 +198,7 @@ export default function Catalog() {
                 },
               }}
               image={ipad}
-              title="IPHONE"
+              title="I PAD"
             />
           </CardContent>
           <CardActions sx={{ justifyContent: "flex-end" }}>

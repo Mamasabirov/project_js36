@@ -1,6 +1,7 @@
 {
   "products": [
     {
+<<<<<<< HEAD
       "title": "Iphone 13 pro",
       "description": "256gb, Небесный",
       "category": "Телефоны",
@@ -23,6 +24,14 @@
       "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13pro/210915120039954461-1200x1200.webp",
       "price": 100000,
       "id": 10
+=======
+      "title": "23432",
+      "description": "423432",
+      "category": "Ноутбуки",
+      "image": "23423",
+      "price": 23423,
+      "id": 3
+>>>>>>> ba74b6150844b20ae1b4155bd6cd7d240aac4e3a
     },
     {
       "title": "Iphone 13",
@@ -244,6 +253,7 @@
       "title": "Наушники Apple",
       "description": " EarPods Plug 3.5",
       "category": "Аксессуары",
+<<<<<<< HEAD
       "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/earpods/510827_1-1200x1200.webp",
       "price": 2500,
       "id": 38
@@ -463,6 +473,17 @@
       "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro1416m2promax/silver/mbp16-silver-select-202301-1200x1200.webp",
       "price": 326000,
       "id": 65
+=======
+      "image": "23423",
+      "price": 23423,
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "name": "Приставки",
+      "id": 1
+>>>>>>> ba74b6150844b20ae1b4155bd6cd7d240aac4e3a
     }
   ]
 }

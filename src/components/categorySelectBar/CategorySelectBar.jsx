@@ -35,9 +35,9 @@ export default function CategorySelectBar() {
   }, [search]);
   return (
       <AppBar sx={{backgroundColor: 'black', color: 'white'}} position='sticky'>
-        <Toolbar >
+        <Toolbar sx={{display: 'flex', flexWrap: 'wrap'}}>
               <TextField
-              sx={{input: {color: 'white'}, backgroundColor: 'gray', borderRadius: '5px'}}
+              sx={{input: {color: 'white'}, backgroundColor: 'gray', borderRadius: '5px', width: {xs:'100%', sm: "200px"}}}
               onChange={(e)=>{
                 setCategoryToNavigate(true)
                 setSearch(e.target.value)
@@ -49,7 +49,7 @@ export default function CategorySelectBar() {
               
               />
               {categories.map((category) => 
-                <Button  onClick={() => fetchByParams('category', category.title)} sx={{color: "white", marginX: {sx: '20px', md: '70px'}}} key={category.id}>
+                <Button  onClick={() => fetchByParams('category', category.title)} sx={{color: "white", marginX: {sx: '20px', md: '20px'}}} key={category.id}>
                   {category.title}
                   </Button>
               )}

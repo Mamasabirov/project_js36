@@ -6,6 +6,7 @@
   
   .btn-nav:hover {
     box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    color: black;
   }
   
   .btn-nav:before {
@@ -21,6 +22,7 @@
       rgba(146, 148, 248, 0.4),
       transparent
     );
+    
     transition: all 650ms;
   }
   

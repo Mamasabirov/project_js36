@@ -130,7 +130,7 @@ const iconCheckListStyles = {
 };
 
 const newBackgrounds = {
-  backgroundColor: "fff",
+  backgroundColor: "WhiteSmoke",
   padding: 0,
   margin: 0,
 };

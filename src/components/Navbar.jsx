@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
+import { useCart } from "../contexts/CartContextProvider";
+import { Badge } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const pages = [
   { id: 1, title: "Каталог", link: "/products" },
@@ -32,6 +35,12 @@ function Navbar() {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { getProductsCountInCart, addProductToCart } = useCart();
+  const [badgeCount, setBadgeCount] = React.useState(0);
+
+  React.useEffect(() => {
+    setBadgeCount(getProductsCountInCart());
+  }, [addProductToCart]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -183,6 +192,11 @@ function Navbar() {
                 </Button>
               </Link>
             ) : null}
+            <Link to={"/cart"}>
+              <Badge badgeContent={badgeCount} color="success">
+                <ShoppingCartIcon sx={{ color: "black" }} />
+              </Badge>
+            </Link>
           </Box>
           <Typography sx={{ color: "black" }}>
             {email

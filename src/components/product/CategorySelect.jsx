@@ -1,15 +1,13 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import { useSearchParams } from 'react-router-dom';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import { useSearchParams } from "react-router-dom";
 
-export default function CategorySelect({handleInput, product}) {
-  const [category, setCategory] = React.useState('');
-  
-
+export default function CategorySelect({ handleInput, product }) {
+  const [category, setCategory] = React.useState("");
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -23,10 +21,10 @@ export default function CategorySelect({handleInput, product}) {
           label="Category"
           defaultValue={""}
         >
-          <MenuItem value='Телефоны'>Телефоны</MenuItem>
-          <MenuItem value='Ноутбуки'>Ноутбуки</MenuItem>
-          <MenuItem value='Аксессуары'>Аксессуары</MenuItem>
-          <MenuItem value='Приставки'>Приставки</MenuItem>
+          <MenuItem value="Телефоны">Телефоны</MenuItem>
+          <MenuItem value="Ноутбуки">Ноутбуки</MenuItem>
+          <MenuItem value="Чысы">Чысы</MenuItem>
+          <MenuItem value="Планжеты">Планжеты</MenuItem>
         </Select>
       </FormControl>
     </Box>

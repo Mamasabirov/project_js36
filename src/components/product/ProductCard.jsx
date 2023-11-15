@@ -1,22 +1,26 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions, IconButton } from '@mui/material';
-import { useProducts } from '../../contexts/ProductContextProvider';
-import { useNavigate } from 'react-router';
-import { ADMIN } from '../../helpers/consts';
-import { useAuth } from '../../contexts/AuthContextProvider';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import { useNavigate } from "react-router";
+import { ADMIN } from "../../helpers/consts";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import { useCart } from "../../contexts/CartContextProvider";
 
-export default function ProductCard({item}) {
+export default function ProductCard({ item }) {
   const {
     user: { email },
   } = useAuth();
-    const {deleteProduct} = useProducts()
-    const navigate = useNavigate()
+  const { deleteProduct } = useProducts();
+  const { addProductToCart, checkProductInCart } = useCart();
+
+  const navigate = useNavigate();
   return (
-    <Card sx={{ width: 250, margin: '10px' }}>
+    <Card sx={{ width: 250, margin: "10px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -34,16 +38,22 @@ export default function ProductCard({item}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-          {email === ADMIN ? (
-        <>
-        <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
-        <Button onClick={()=>deleteProduct(item.id)}>Delete</Button>
-        </> 
+        {email === ADMIN ? (
+          <>
+            <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
+            <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
+          </>
         ) : (
-          <IconButton>
-            
+          <IconButton
+            sx={{
+              backgroundColor: checkProductInCart(item.id) ? "black" : "",
+              color: checkProductInCart(item.id) ? "white" : "",
+            }}
+            onClick={() => addProductToCart(item)}
+          >
+            <AddShoppingCartIcon />
           </IconButton>
-      )}      
+        )}
       </CardActions>
     </Card>
   );

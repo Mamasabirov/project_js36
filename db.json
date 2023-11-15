@@ -1,12 +1,3 @@
 {
-  "products": [
-    {
-      "title": "sdf",
-      "description": "32432",
-      "category": "Ноутбуки",
-      "image": "23432",
-      "price": 23423,
-      "id": 1
-    }
-  ]
+  "products": []
 }

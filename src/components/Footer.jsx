@@ -5,9 +5,11 @@ import mscard from "../assets/mastercard.png";
 import visa from "../assets/visa.png";
 import opt from "../assets/optima.png";
 import mbank from "../assets/mbank.png";
+import "../components/adaptive.css";
 const Footer = () => {
   return (
     <div
+      className="footer-container"
       style={{
         backgroundColor: "#101010",
         height: "100rem",
@@ -18,6 +20,7 @@ const Footer = () => {
       }}
     >
       <img
+        className="autor-image"
         style={{
           position: "absolute",
           margin: "0 211px -30px",
@@ -29,8 +32,9 @@ const Footer = () => {
         }}
         src={autor}
       />
-      <div>
+      <div className="content-container">
         <h2
+          className="main-title"
           style={{
             position: "absolute",
             color: "#fff",
@@ -69,6 +73,7 @@ const Footer = () => {
       </div>
 
       <p
+        className="footer-text"
         style={{
           color: "rgba(255,255,255,0.4);",
           maxWidth: "390px",
@@ -85,6 +90,7 @@ const Footer = () => {
         качественные аксессуары.
       </p>
       <p
+        className="footer-text"
         style={{
           color: "#efeeed",
           position: "absolute",
@@ -97,7 +103,7 @@ const Footer = () => {
         Garmin в Кыргызстане, а также официальным дистрибьютором JBL & Harman
         Kardon и умных устройств от Yandex.
       </p>
-      <div>
+      <div className="contact-info">
         <ul
           style={{
             color: "#5D5D63",
@@ -209,7 +215,7 @@ const Footer = () => {
           <li>Сертификаты</li>
         </ul>
       </div>
-      <div style={{ position: "absolute" }}>
+      <div className="copyright" style={{ position: "absolute" }}>
         <h4 style={{ color: "#fff", marginRight: "52% ", marginTop: "89rem" }}>
           © 2023 Asia Store
         </h4>

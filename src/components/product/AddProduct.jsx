@@ -23,7 +23,7 @@ const AddProduct = () => {
       setProduct(obj);
     }
     }
-    console.log(product);
+  
     return (
         <Box sx={{ width: '50vw', height: 400, margin: '20px auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <TextField onChange={handleInput} name='title' label="Title" fullWidth variant="outlined" />

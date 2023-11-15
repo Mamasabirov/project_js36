@@ -9,7 +9,6 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useNavigate } from "react-router";
 import { ADMIN } from "../../helpers/consts";
 import { useAuth } from "../../contexts/AuthContextProvider";
-
 import Detail from "./Detail";
 import { useCart } from "../../contexts/CartContextProvider";
 
@@ -27,7 +26,7 @@ export default function ProductCard({ item }) {
     const handleClose = () => setOpen(false);
 
   return (
-    <Card sx={{ width: 250, margin: "10px" }}>
+    <Card sx={{ width: {lg: '250px', sm: "350px", xs: "500px"}, margin: "10px" }}>
       <CardActionArea onClick={handleOpen}>
         <CardMedia
           component="img"

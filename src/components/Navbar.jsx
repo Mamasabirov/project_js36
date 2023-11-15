@@ -11,15 +11,14 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Badge } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
-import { getProductsCountInCart } from "../helpers/functions";
 import { useCart } from "../contexts/CartContextProvider";
+import { Badge } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const pages = [
   { id: 1, title: "Каталог", link: "/products" },

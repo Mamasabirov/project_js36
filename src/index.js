@@ -15,7 +15,9 @@ root.render(
     <AuthContextProvider>
       <ProductContextProvider>
         <CartContextProvider>
-          <App />
+          <ThemeProvider theme={THEME}>
+            <App />
+          </ThemeProvider>
         </CartContextProvider>
       </ProductContextProvider>
     </AuthContextProvider>

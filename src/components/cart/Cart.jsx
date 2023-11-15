@@ -6,8 +6,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Button, TextField } from "@mui/material";
 import { useCart } from "../../contexts/CartContextProvider";
+import { Button, TextField } from "@mui/material";
 
 export default function Cart() {
   const { cart, getCart, changeProductCount, deleteProductFromCart } =

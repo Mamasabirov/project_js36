@@ -31,8 +31,17 @@ const Footer = () => {
         <div className="link-group">
           <h3>О компании</h3>
           <ul>
-            <li>О нас</li>
-            <li>Контакты</li>
+            <li>
+              <a className="link-1" href="/">
+                О нас
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className="link-2" href="contact">
+                Контакты
+              </a>{" "}
+            </li>
             <li>Локации</li>
           </ul>
         </div>
@@ -66,5 +75,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

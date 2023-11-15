@@ -13,7 +13,9 @@ root.render(
   <BrowserRouter>
     <AuthContextProvider>
       <ProductContextProvider>
-        <App />
+        <ThemeProvider theme={THEME}>
+            <App/>
+        </ThemeProvider>
       </ProductContextProvider>
     </AuthContextProvider>  
   </BrowserRouter>

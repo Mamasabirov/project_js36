@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer, useState } from 'react';
 import { ACTIONS, API_PRODUCTS } from '../helpers/consts';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
@@ -22,6 +22,7 @@ const reducer = (state=INIT_STATE, action) => {
 }
    
 const ProductContextProvider = ({children}) => {
+    const [categoryToNavigate, setCategoryToNavigate] = useState(false)
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
     const navigate = useNavigate()
     const addProduct = async(newProduct) => {
@@ -70,7 +71,10 @@ const ProductContextProvider = ({children}) => {
         oneProduct: state.oneProduct,
         getOneProduct,
         saveChanges,
-        fetchByParams
+        fetchByParams,
+
+        setCategoryToNavigate,
+        categoryToNavigate
 }
     return (
        <productContext.Provider value={values}>{children}</productContext.Provider>

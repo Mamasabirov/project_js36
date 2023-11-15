@@ -1,20 +1,12 @@
 {
   "products": [
     {
-      "title": "azaz",
-      "description": "za",
-      "category": "Ноутбуки",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYV2jpX8c6gBp8fAWP2SXzkNNqIkOCgoZMA&usqp=CAU",
-      "price": 222,
-      "id": 2
-    },
-    {
-      "title": "aza",
-      "description": "azaz",
-      "category": "Приставки",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHcASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwYFB//EADYQAAEDAwMCAwYFBAIDAAAAAAECAxEABCEFEjETQSJRgQYUYXGRoSMyQrHwB3KSwYLRFTNS/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAhEQACAgICAQUAAAAAAAAAAAAAAQIRAyESMQQiQYGx8P/aAAwDAQACEQMRAD8A8T6z8T1XI/vNdbTtF1K+sDfm7t7Wy3lvr3V0GwVASQBO49uBXIU0ptRSuJSYIBn7indAnckJQDkJBmM8d/vQB1yAxuA1QPqAA/CSv7bwk/ahEOuuOhJuVIB/UtZgfOmcUC2BuClGCSZJ48/L4VUpJBhXNAWNvu7wStxSQZI3nIpLuHSolLjiUk4G8mBVYSe1P01DJBigJB93u85/kampbyMLeWlUBX55kEAjj51UAgiM7v3M/bFJISVwVAA/qI4oCSn3J8LzsQOVHmM0quZ90FrcJeacVcK29BaVwlGfFI7yMUqApAGDuB8+cfOmc2BaumVbf07uftUciUqkfCpRAkigIpBPFEsMBRlUx3pmXWgmF0UhW9kIYT4ifrmpSsDBKF7UMoHzo2400ISlCFAq2yojuautrAMpCuVqEkgcV1HbM721SFCOR2/maN+xFGPft1MhSqoCZTuAgAgHNavUdNC0K27kiNpJM57+tZm6aUm4UFkwDBUqfSoJGURtyQpRAgg/ljEfHgUqqScwcpmYpUA48SwPM0b7uqAvaSmgsJcSe",
-      "price": 400,
-      "id": 3
+      "title": "йцу",
+      "description": "32423",
+      "category": "Аксессуары",
+      "image": "23432",
+      "price": 23432,
+      "id": 1
     }
   ]
 }

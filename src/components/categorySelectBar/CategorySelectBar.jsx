@@ -14,26 +14,34 @@ const categories = [
   {id: 1, title: 'Телефоны'},
   {id: 2, title: 'Ноутбуки'},
   {id: 3, title: 'Аксессуары'},
-  {id: 4, title: 'Приставки'},
+  {id: 4, title: 'Планшеты'},
 ]
 
 
 export default function CategorySelectBar() {
-  const {fetchByParams} = useProducts()
+  const {fetchByParams, categoryToNavigate, setCategoryToNavigate} = useProducts()
   const [searchParams, setSearchParams] = useSearchParams()
-    const [search, setSearch] = React.useState(searchParams.get('q') || '');
+  const [search, setSearch] = React.useState(searchParams.get('q') || '');
+  
 
-    React.useEffect(() => {
+  React.useEffect(() => {
+    if(!categoryToNavigate){
+      return
+    }
     setSearchParams({
       q: search,
-    });
+    })
+   
   }, [search]);
   return (
       <AppBar sx={{backgroundColor: 'black', color: 'white'}} position='sticky'>
         <Toolbar >
               <TextField
               sx={{input: {color: 'white'}, backgroundColor: 'gray', borderRadius: '5px'}}
-              onChange={(e)=>setSearch(e.target.value)}
+              onChange={(e)=>{
+                setCategoryToNavigate(true)
+                setSearch(e.target.value)
+              }}
               value={search}
               label='Search'
               variant='filled'

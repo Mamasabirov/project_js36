@@ -9,7 +9,10 @@ const App = () => {
     <div>
       <Navbar />
       <MainRoutes />
-      <Footer />
+      <div style={{marginTop: 'auto'}}>
+        <Footer />
+      </div>
+      
     </div>
   );
 };

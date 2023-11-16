@@ -32,7 +32,7 @@ const Footer = () => {
           <h3>О компании</h3>
           <ul>
             <li>
-              <a className="link-1" href="/">
+              <a className="link-1" href="/aboutus">
                 О нас
               </a>
             </li>

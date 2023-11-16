@@ -18,7 +18,7 @@ const ProductList = () => {
     setPage(value);
   };
 
-  const itemPerPage = 3;
+  const itemPerPage = 9;
   const count = Math.ceil(products.length / itemPerPage);
 
   function currentData() {
@@ -29,7 +29,7 @@ const ProductList = () => {
   }
   
     return (
-        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', width: '75%', margin: 'auto'}}>
+        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', width: '80%', margin: 'auto'}}>
             {currentData().map((item) =>          
                   <ProductCard key={item.id} item={item}/>
             )}

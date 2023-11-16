@@ -1,26 +1,468 @@
 {
   "products": [
     {
-      "title": "azaz",
-      "description": "za",
-      "category": "Ноутбуки",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYV2jpX8c6gBp8fAWP2SXzkNNqIkOCgoZMA&usqp=CAU",
-      "price": 222,
-      "id": 2
+      "title": "Iphone 13 pro",
+      "description": "256gb, Небесный",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13pro/210915120041170330-1200x1200.webp",
+      "price": 85000,
+      "id": 8
     },
     {
-      "title": "aza",
-      "description": "azaz",
-      "category": "Приставки",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAпщеAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHcASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwYFB//EADYQAAEDAwMCAwYFBAIDAAAAAAECAxEABCEFEjETQSJRgQYUYXGRoSMyQrHwB3KSwYLRFTNS/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAhEQACAgICAQUAAAAAAAAAAAAAAQIRAyESMQQiQYGx8P/aAAwDAQACEQMRAD8A8T6z8T1XI/vNdbTtF1K+sDfm7t7Wy3lvr3V0GwVASQBO49uBXIU0ptRSuJSYIBn7indAnckJQDkJBmM8d/vQB1yAxuA1QPqAA/CSv7bwk/ahEOuuOhJuVIB/UtZgfOmcUC2BuClGCSZJ48/L4VUpJBhXNAWNvu7wStxSQZI3nIpLuHSolLjiUk4G8mBVYSe1P01DJBigJB93u85/kampbyMLeWlUBX55kEAjj51UAgiM7v3M/bFJISVwVAA/qI4oCSn3J8LzsQOVHmM0quZ90FrcJeacVcK29BaVwlGfFI7yMUqApAGDuB8+cfOmc2BaumVbf07uftUciUqkfCpRAkigIpBPFEsMBRlUx3pmXWgmF0UhW9kIYT4ifrmpSsDBKF7UMoHzo2400ISlCFAq2yojuautrAMpCuVqEkgcV1HbM721SFCOR2/maN+xFGPft1MhSqoCZTuAgAgHNavUdNC0K27kiNpJM57+tZm6aUm4UFkwDBUqfSoJGURtyQpRAgg/ljEfHgUqqScwcpmYpUA48SwPM0b7uqAvaSmgsJcSe",
-      "price": 400,
-      "id": 3
-    }
-  ],
-  "categories": [
+      "title": "Iphone 13 pro",
+      "description": "256gb, Золотой",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13pro/210915120039015160-1200x1200.webp",
+      "price": 88000,
+      "id": 9
+    },
     {
-      "name": "Приставки",
-      "id": 1
+      "title": "Iphone 13 pro",
+      "description": "1T, Графитовый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13pro/210915120039954461-1200x1200.webp",
+      "price": 100000,
+      "id": 10
+    },
+    {
+      "title": "Iphone 13",
+      "description": "128gb, Сияющая звезда",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13/210915120029233895-1200x1200.webp",
+      "price": 60000,
+      "id": 11
+    },
+    {
+      "title": "Iphone 13",
+      "description": "128gb, red(PRODUCT)",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13/210915120028021757-1200x1200.webp",
+      "price": 64000,
+      "id": 12
+    },
+    {
+      "title": "Iphone 13",
+      "description": "256gb, Синий",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13/210915120032782805-1200x1200.webp",
+      "price": 65000,
+      "id": 13
+    },
+    {
+      "title": "Iphone 14",
+      "description": "128gb, Желтый ",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14plus/yellow/rukz_iphone14plus_q223_yellow_pdp_image_position-1a-1200x1200.webp",
+      "price": 80000,
+      "id": 14
+    },
+    {
+      "title": "Iphone 14",
+      "description": "256gb, Голубой",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14/blue/wwen_iphone14_q422_blue_pdp_image_position-1a-1200x1200.webp",
+      "price": 82000,
+      "id": 15
+    },
+    {
+      "title": "Iphone 14",
+      "description": "256gb, Черный",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14/midnight/wwen_iphone14_q422_midnight_pdp_image_position-1a-1200x1200.webp",
+      "price": 82000,
+      "id": 16
+    },
+    {
+      "title": "Iphone 14 pro",
+      "description": "128gb, Темно-фиолетовый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/deeppurple/wwen_iphone14pro_q422_deep-purple_pdp-images_position-1a-1200x1200.webp",
+      "price": "",
+      "id": 17
+    },
+    {
+      "title": "Iphone 14 pro",
+      "description": "256gb, Золотой",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/gold/wwen_iphone14pro_q422_gold_pdp-images_position-1a-1200x1200.webp",
+      "price": "",
+      "id": 18
+    },
+    {
+      "title": "Iphone 14 pro",
+      "description": "1T, Серебристый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/silver/wwen_iphone14pro_q422_silver_pdp-images_position-1a-1200x1200.webp",
+      "price": "",
+      "id": 19
+    },
+    {
+      "title": "Iphone 14 pro max",
+      "description": "1T, Темно-фиолетовый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14promax/deeppurple/wwen_iphone14promax_q422_deep-purple_pdp-images_position-1a-450x450.webp",
+      "price": 100000,
+      "id": 20
+    },
+    {
+      "title": "Iphone 14 pro max",
+      "description": "512gb, Золотой",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14promax/gold/wwen_iphone14promax_q422_gold_pdp-images_position-1a-450x450.webp",
+      "price": 102000,
+      "id": 21
+    },
+    {
+      "title": "Iphone 14 pro max",
+      "description": "128gb, Серебристый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14promax/silver/wwen_iphone14promax_q422_silver_pdp-images_position-1a-450x450.webp",
+      "price": 99000,
+      "id": 22
+    },
+    {
+      "title": "Iphone 15",
+      "description": "128gb, Черный",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone15/1515%2B/iphone15/black/iphone151-1200x1200.webp",
+      "price": 85000,
+      "id": 23
+    },
+    {
+      "title": "Iphone 15",
+      "description": "256gb, Зеленый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/1515%2B/iphone15/green/iphone15green1-1200x1200.jpg",
+      "price": 87000,
+      "id": 24
+    },
+    {
+      "title": "Iphone 15",
+      "description": "256gb, Розовый",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/1515%2B/iphone15/pink/iphone15pink1-1200x1200.jpg",
+      "price": 87000,
+      "id": 25
+    },
+    {
+      "title": "Iphone 15 pro ",
+      "description": "128gb, White Titanium",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone15/15pro/whitetitanium/iphone_15_pro_max_white_titanium_pdp_image_position-1__ww-en-1200x1200.webp",
+      "price": 110000,
+      "id": 26
+    },
+    {
+      "title": "Iphone 15 pro",
+      "description": "256gb, Black Titanium",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/15pro/blacktitanium/iphone_15_pro_max_black_titanium_pdp_image_position-1__ww-en-1200x1200.jpg",
+      "price": 110000,
+      "id": 27
+    },
+    {
+      "title": "Iphone 15 pro",
+      "description": "512gb, Blue Titanium",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/15pro/bluetitanium/iphone_15_pro_max_blue_titanium_pdp_image_position-1__ww-en-1200x1200.jpg",
+      "price": 115000,
+      "id": 28
+    },
+    {
+      "title": "Iphone 15 pro max",
+      "description": "256gb, Natural Titanium",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/15pro/naturaltitanium/iphone_15_pro_max_natural_titanium_pdp_image_position-1__ww-en-1200x1200.jpg",
+      "price": 125000,
+      "id": 29
+    },
+    {
+      "title": "Iphone 15 pro max",
+      "description": "512gb, Black Titanium",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/15pro/blacktitanium/iphone_15_pro_max_black_titanium_pdp_image_position-1__ww-en-1200x1200.jpg",
+      "price": 130000,
+      "id": 30
+    },
+    {
+      "title": "Iphone 15 pro max ",
+      "description": "1T, Blue Titanium",
+      "category": "Телефоны",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/15pro/bluetitanium/iphone_15_pro_max_blue_titanium_pdp_image_position-1__ww-en-1200x1200.jpg",
+      "price": 135000,
+      "id": 31
+    },
+    {
+      "title": "Ipad 10",
+      "description": "256gb, Серебристый",
+      "category": "Планшеты",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/ipad10th/silver/apple-ipad-10-9-wi-fi-64gb-silver-10th-gen-2022-plansetdators-6-63500327256dc-1200x1200.webp",
+      "price": 55000,
+      "id": 32
+    },
+    {
+      "title": "Apple iPad Air 5",
+      "description": "256gb, Серый Космос",
+      "category": "Планшеты",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/air5/ld0005936185_1-1200x1200.webp",
+      "price": 60000,
+      "id": 33
+    },
+    {
+      "title": "Apple iPad mini 6",
+      "description": "256gb, Пурпурный",
+      "category": "Планшеты",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/mini6/ipad-mini-select-wifi-purple-202109_fmt_whh-1200x1200.webp",
+      "price": 72000,
+      "id": 34
+    },
+    {
+      "title": "Apple iPad Pro 11",
+      "description": "256gb, Серебристый",
+      "category": "Планшеты",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/ipadpro11m2/ipad-pro-13-select-wifi-silver-202210-1200x1200.webp",
+      "price": 82000,
+      "id": 35
+    },
+    {
+      "title": "Apple iPad Pro 11",
+      "description": "128gb, Серый космос",
+      "category": "Планшеты",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/ipadpro11m2/ipad-pro-13-select-wifi-spacegray-202210-1200x1200.webp",
+      "price": 85000,
+      "id": 36
+    },
+    {
+      "title": "Apple iPad Pro 12,9",
+      "description": "256gb,  Серый космос",
+      "category": "Планшеты",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/ipadpro11m2/ipad-pro-13-select-wifi-spacegray-202210-1200x1200.webp",
+      "price": 79990,
+      "id": 37
+    },
+    {
+      "title": "Наушники Apple",
+      "description": " EarPods Plug 3.5",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/earpods/510827_1-1200x1200.webp",
+      "price": 2500,
+      "id": 38
+    },
+    {
+      "title": "Наушники Apple EarPods ",
+      "description": "Lightning Connector",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/earpods/mmtn2-1000x768-1200x1200.webp",
+      "price": 2700,
+      "id": 39
+    },
+    {
+      "title": "Наушники AirPods",
+      "description": " (2‑го поколения)",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/190326150012817137-1200x1200.webp",
+      "price": 10990,
+      "id": 40
+    },
+    {
+      "title": "Наушники Apple",
+      "description": "AirPods Max Розовый",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodsmax/81nipe9-5ml._ac_sl1500_-1200x1200.webp",
+      "price": 52990,
+      "id": 41
+    },
+    {
+      "title": "Наушники Apple ",
+      "description": "AirPods Max Голубое Небо",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodsmax/81jkmpnhvsl._ac_sl1500_-1200x1200.webp",
+      "price": 52990,
+      "id": 42
+    },
+    {
+      "title": "Наушники Apple ",
+      "description": "AirPods Max Зеленый",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodsmax/green/81fnsoe94nl._ac_sl1500_-1200x1200.webp",
+      "price": 52990,
+      "id": 43
+    },
+    {
+      "title": "Наушники Apple ",
+      "description": "AirPods Max Серый Космос",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodsmax/81jqupkivrl._ac_sl1500_-1200x1200.webp",
+      "price": 52990,
+      "id": 44
+    },
+    {
+      "title": "Наушники AirPods ",
+      "description": "(3‑го поколения)",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpods3/116e3a5a-62db-41ed-bd46-0b687eb81d8f-1200x1200.webp",
+      "price": 15990,
+      "id": 45
+    },
+    {
+      "title": "Наушники Apple AirPods Pro",
+      "description": " (2‑го поколения) с поддержкой MagSafe (USB‑C)",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodspro2gn/mqd83-1200x1200.webp",
+      "price": 20990,
+      "id": 46
+    },
+    {
+      "title": "Apple Watch SЕ 2-пок",
+      "description": "GPS, 40мм, Серебристый, Спортивный ремешок цвета \"синий шторм\" S/M",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/1newpage/apple/applewatch/se2023/sportband/40mm/se40slv1-1200x1200.webp",
+      "price": 24490,
+      "id": 47
+    },
+    {
+      "title": "Apple Watch SЕ 2-пок",
+      "description": "GPS, 44мм, Темная ночь, Спортивный ремешок цвета \"темная ночь\" S/M",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/1newpage/apple/applewatch/se2023/sportband/44mm/se44mdn1-1200x1200.webp",
+      "price": 27990,
+      "id": 48
+    },
+    {
+      "title": "Apple Watch SЕ 2-пок",
+      "description": "GPS, 40мм, Сияющая звезда, Спортивный ремешок цвета «сияющая звезда» M/L",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/1newpage/apple/applewatch/se2023/sportband/40mm/sestrl401-1200x1200.webp",
+      "price": 25000,
+      "id": 49
+    },
+    {
+      "title": "Apple Watch",
+      "description": " Ultra 2 - поколения, титановый циферблат с Alpine Loop L цвета «cерая олива»",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/ultra2gen/alpineloop/oliva/apple_watch_ultra_2_cellular_49mm_titanium_olive_alpine_loop_pdp_image_position-1__en-us-1200x1200.webp",
+      "price": 75990,
+      "id": 50
+    },
+    {
+      "title": "Apple Watch ",
+      "description": "Ultra 2 - поколения, титановый циферблат с белым Ocean Band",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/ultra2gen/oceanband/white/apple_watch_ultra_2_cellular_49mm_titanium_white_ocean_band_pdp_image_position-1__en-us-1200x1200.webp",
+      "price": 76000,
+      "id": 51
+    },
+    {
+      "title": "Apple Watch",
+      "description": " Ultra 2 - поколения, титановый циферблат с серо-зеленым Trail Loop S/M",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/ultra2gen/trailloop/greengrey/apple_watch_ultra_2_cellular_49mm_titanium_green_gray_trail_loop_pdp_image_position-1__en-us-1200x1200.webp",
+      "price": 78000,
+      "id": 52
+    },
+    {
+      "title": "Apple Watch ",
+      "description": "Series 8 GPS, 41мм, (PRODUCT)RED, Спортивный ремешок цвета (PRODUCT)RED",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/series8/red/mp7j3ref_vw_34fr%2Bwatch-45-alum-red-nc-8s_vw_34fr_wf_co_geo_gb-1200x1200.webp",
+      "price": 34990,
+      "id": 53
+    },
+    {
+      "title": "Apple Watch ",
+      "description": "Series 9 GPS, 45 мм, серебристый, спортивный ремешок цвета \"синий шторм\" M/L",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/series9/sportband/silver/apple_watch_series_9_gps_45mm_silver_aluminum_storm_blue_sport_band_pdp_image_position-1__en-us-1200x1200.webp",
+      "price": 42500,
+      "id": 54
+    },
+    {
+      "title": "Apple Watch",
+      "description": " Series 9 GPS, 45 мм, ярко-розовый, спортивный браслет розового цвета",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/series9/sportloop/pink/apple_watch_series_9_gps_45mm_pink_aluminum_light_pink_sport_loop_pdp_image_position-1__en-us-1200x1200.webp",
+      "price": 42990,
+      "id": 55
+    },
+    {
+      "title": "Apple Watch",
+      "description": " Series 9 GPS, 41 мм, серебристый, спортивный браслет синего цвета",
+      "category": "Аксессуары",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/series9/sportloop/winterblue/apple_watch_series_9_gps_45mm_silver_aluminum_winter_blue_sport_loop_pdp_image_position-1__en-us-1200x1200.webp",
+      "price": 39990,
+      "id": 56
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Air 15.3\" Apple M2 (8C CPU/10C GPU), 8 ГБ, 256 ГБ, Cерый Космос",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/spacegray15/mba15-spacegray-gallery1-202306-1200x1200.webp",
+      "price": 130500,
+      "id": 57
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Air 15.3\" Apple M2 (8C CPU/10C GPU), 8 ГБ, 256 ГБ, Серебристый",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/silver15/mba15-silver-gallery1-202306-1200x1200.webp",
+      "price": 130000,
+      "id": 58
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Air 13.6\" Apple M2 (8C CPU/10C GPU), 16 ГБ, 512 ГБ, Тёмная Ночь",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/midnight/macbook-air-midnight-gallery1-20220606-1200x1200.webp",
+      "price": 159000,
+      "id": 59
+    },
+    {
+      "title": "Apple MacBook",
+      "description": " Air 13.6\" Apple M2 (8C CPU/10C GPU), 16 ГБ, 512 ГБ, Cерый Космос",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/spacegray/macbook-air-spacegray-gallery1-20220606-1200x1200.webp",
+      "price": 182000,
+      "id": 60
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Air 13.6\" Apple M2 (8C CPU/8C GPU), 8 ГБ, 256 ГБ, Cерый Космос",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/spacegray/macbook-air-spacegray-gallery1-20220606-1200x1200.webp",
+      "price": 115000,
+      "id": 61
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Pro 14.2\" M2 Pro (10С CPU/16С GPU) 16 ГБ, 512 ГБ \"Серый космос\"",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro1416m2promax/spacegray/mbp16-spacegray-select-202301-1200x1200.webp",
+      "price": 19990,
+      "id": 62
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Pro 14.2\" M2 Pro (12С CPU/19С GPU) 16 ГБ, 1 TБ \"Серый космос\"",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro1416m2promax/spacegray/mbp16-spacegray-select-202301-1200x1200.webp",
+      "price": 238500,
+      "id": 63
+    },
+    {
+      "title": "Apple MacBook",
+      "description": " Pro 14.2\" M2 Max (12С CPU/30С GPU) 32 ГБ, 1 TБ \"Серый космос\"",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro1416m2promax/spacegray/mbp16-spacegray-select-202301-1200x1200.webp",
+      "price": 296000,
+      "id": 64
+    },
+    {
+      "title": "Apple MacBook ",
+      "description": "Pro 16.2\" M2 Max (12С CPU/38С GPU) 32 ГБ, 1 TБ, Серебристый",
+      "category": "Ноутбуки",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro1416m2promax/silver/mbp16-silver-select-202301-1200x1200.webp",
+      "price": 326000,
+      "id": 65
     }
   ]
 }

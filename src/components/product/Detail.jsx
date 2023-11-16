@@ -1,8 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { Button, IconButton } from "@mui/material";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { Button } from "@mui/material";
 import { useCart } from "../../contexts/CartContextProvider";
 
 const styles = {
@@ -49,11 +48,9 @@ export default function Detail({
           </div>
           <div style={{ marginTop: "auto" }}>
             {checkProductInCart(item.id) ? (
-              <Button disabled={true}>Already in cart</Button>
+              <Button disabled={true}>В корзине</Button>
             ) : (
-              <Button onClick={() => addProductToCart(item)}>
-                Buy for {price}$
-              </Button>
+              <Button onClick={() => addProductToCart(item)}>В корзину</Button>
             )}
           </div>
         </Box>

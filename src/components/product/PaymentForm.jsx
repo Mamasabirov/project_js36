@@ -6,6 +6,7 @@ import chip from '../assets/chip.png';
 import nfc from '../assets/nfc.png';
 import ConfettiButton from './ConfettiButton';
 
+
 const PaymentForm = () => {
   const [cardName, setCardName] = useState('Card name');
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
@@ -123,6 +124,7 @@ const PaymentForm = () => {
 
   return (
     <div className="container">
+      <img src="" alt="" />
       <div className="payment">
         <div className="card">
           <div className="card__background">
@@ -198,8 +200,8 @@ const PaymentForm = () => {
               {showCvv ? <FaEyeSlash /> : <FaEye />}
             </button>
           </div>
-          <ConfettiButton showConfetti={formFilled} />
           {!formFilled && <p>Пожалуйста, введите данные во все поля.</p>}
+          <ConfettiButton showConfetti={formFilled} style={{ marginTop: '10px' }}/>         
         </div>
       </form>
     </div>

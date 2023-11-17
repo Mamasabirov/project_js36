@@ -30,7 +30,6 @@
   grid-template-columns: 500px; 
   padding: 4rem 6rem;
   grid-gap: 4rem;
-  left: 50px;
   position: relative;
   
 }
@@ -280,5 +279,10 @@ label {
   margin-left: 8px;
   vertical-align: middle;
   animation: spin 0.7s linear infinite;
+}
+
+
+.confetti-button {
+  margin-top: 10px; 
 }
 

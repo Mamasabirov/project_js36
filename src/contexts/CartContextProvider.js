@@ -28,14 +28,12 @@ const reducer = (state = INIT_STATE, action) => {
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  // функция для получения продуктов добавленных в корзину из хранилища
+
   const getCart = () => {
-    //получаем данные из localStorage
+  
     let cart = getLocalStorage();
 
-    // проверка на наличие данных под ключом cart  в localstorage
-    if (!cart) {
-      //помещаем данные в случае, если в cart лежит null
+    if (!cart) {     
       localStorage.setItem(
         "cart",
         JSON.stringify({

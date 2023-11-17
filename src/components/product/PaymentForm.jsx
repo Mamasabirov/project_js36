@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import './PaymentForm.css';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import visa from '../assets/Visa.png';
-import chip from '../assets/chip.png';
-import nfc from '../assets/nfc.png';
-import ConfettiButton from './ConfettiButton';
+import React, { useState, useEffect } from "react";
+import "./PaymentForm.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import visa from "../assets/Visa.png";
+import chip from "../assets/chip.png";
+import nfc from "../assets/nfc.png";
+import ConfettiButton from "./ConfettiButton";
 
 const PaymentForm = () => {
-  const [cardName, setCardName] = useState('Card name');
-  const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
-  const [expiryDate, setExpiryDate] = useState('MM/YY');
-  const [cvv, setCvv] = useState('000');
+  const [cardName, setCardName] = useState("Card name");
+  const [cardNumber, setCardNumber] = useState("0000 0000 0000 0000");
+  const [expiryDate, setExpiryDate] = useState("MM/YY");
+  const [cvv, setCvv] = useState("000");
   const [showCvv, setShowCvv] = useState(false);
   const [formFilled, setFormFilled] = useState(false);
 
@@ -22,57 +22,57 @@ const PaymentForm = () => {
     const inputElement = document.getElementById(id);
     if (inputElement) {
       if (isFilled) {
-        inputElement.classList.add('filled');
+        inputElement.classList.add("filled");
       } else {
-        inputElement.classList.remove('filled');
+        inputElement.classList.remove("filled");
       }
     }
   };
 
   const isFormFilled = () => {
     return (
-      cardName.trim() !== '' &&
-      cardNumber.trim() !== '' &&
-      expiryDate.trim() !== '' &&
-      cvv.trim() !== ''
+      cardName.trim() !== "" &&
+      cardNumber.trim() !== "" &&
+      expiryDate.trim() !== "" &&
+      cvv.trim() !== ""
     );
   };
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-    let sanitizedValue = '';
+    let sanitizedValue = "";
     switch (id) {
-      case 'name':
-        sanitizedValue = value.replace(/[^a-zA-Zа-яА-Я]/g, '');
+      case "name":
+        sanitizedValue = value.replace(/[^a-zA-Zа-яА-Я]/g, "");
         setCardName(sanitizedValue);
         break;
-      case 'number':
-        const formattedNumber = value.replace(/\D/g, '');
+      case "number":
+        const formattedNumber = value.replace(/\D/g, "");
         const truncatedNumber = formattedNumber.slice(0, 16);
         const cardNumberGroups = truncatedNumber.match(/.{1,4}/g);
 
         if (cardNumberGroups) {
-          const formattedCardNumber = cardNumberGroups.join(' ');
+          const formattedCardNumber = cardNumberGroups.join(" ");
           setCardNumber(formattedCardNumber);
         } else {
           setCardNumber(truncatedNumber);
         }
         break;
-      case 'date':
-        const formattedDate = value.replace(/\D/g, '');
+      case "date":
+        const formattedDate = value.replace(/\D/g, "");
 
         if (formattedDate.length >= 2) {
           const truncatedDate = formattedDate.slice(0, 4);
           const month = truncatedDate.slice(0, 2);
           const year = truncatedDate.slice(2, 4);
           const validMonth = Math.min(Math.max(parseInt(month, 10), 1), 12);
-          setExpiryDate(`${validMonth.toString().padStart(2, '0')}/${year}`);
+          setExpiryDate(`${validMonth.toString().padStart(2, "0")}/${year}`);
         } else {
           setExpiryDate(formattedDate);
         }
         break;
-      case 'cvv':
-        const formattedCvv = value.replace(/\D/g, '').slice(0, 3);
+      case "cvv":
+        const formattedCvv = value.replace(/\D/g, "").slice(0, 3);
         setCvv(formattedCvv);
         break;
       default:
@@ -82,28 +82,28 @@ const PaymentForm = () => {
 
   const handleInputFocus = (id) => {
     switch (id) {
-      case 'name':
-        if (cardName === 'Card name') {
-          setCardName('');
-          setInputState('name', true);
+      case "name":
+        if (cardName === "Card name") {
+          setCardName("");
+          setInputState("name", true);
         }
         break;
-      case 'number':
-        if (cardNumber === '0000 0000 0000 0000') {
-          setCardNumber('');
-          setInputState('number', true);
+      case "number":
+        if (cardNumber === "0000 0000 0000 0000") {
+          setCardNumber("");
+          setInputState("number", true);
         }
         break;
-      case 'date':
-        if (expiryDate === 'MM/YY') {
-          setExpiryDate('');
-          setInputState('date', true);
+      case "date":
+        if (expiryDate === "MM/YY") {
+          setExpiryDate("");
+          setInputState("date", true);
         }
         break;
-      case 'cvv':
-        if (cvv === '000') {
-          setCvv('');
-          setInputState('cvv', true);
+      case "cvv":
+        if (cvv === "000") {
+          setCvv("");
+          setInputState("cvv", true);
         }
         break;
       default:
@@ -114,7 +114,7 @@ const PaymentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isFormFilled()) {
-      console.log('Данные формы:', { cardName, cardNumber, expiryDate, cvv });
+      console.log("Данные формы:", { cardName, cardNumber, expiryDate, cvv });
       setFormFilled(true);
     } else {
       setFormFilled(false);
@@ -130,7 +130,7 @@ const PaymentForm = () => {
               <img src={visa} alt="Visa logo" />
             </div>
           </div>
-          <div className='card__left'>
+          <div className="card__left">
             <div className="card__nfc">
               <img src={chip} alt="chip" />
               <img src={nfc} alt="nfc" />
@@ -151,43 +151,43 @@ const PaymentForm = () => {
         <div className="form__detail">
           <label htmlFor="name">Cardholder Name</label>
           <input
-            className='input_big'
+            className="input_big"
             type="text"
             id="name"
             value={cardName}
             onChange={handleInputChange}
-            onFocus={() => handleInputFocus('name')}
+            onFocus={() => handleInputFocus("name")}
             required
           />
           <label htmlFor="number">Card Number</label>
           <input
-            className='input_big'
+            className="input_big"
             type="text"
             id="number"
             value={cardNumber}
             onChange={handleInputChange}
-            onFocus={() => handleInputFocus('number')}
+            onFocus={() => handleInputFocus("number")}
             required
           />
           <label htmlFor="date">Expiry Date</label>
           <input
-            className='input_small'
+            className="input_small"
             type="text"
             id="date"
             value={expiryDate}
             onChange={handleInputChange}
-            onFocus={() => handleInputFocus('date')}
+            onFocus={() => handleInputFocus("date")}
             required
           />
           <label htmlFor="cvv">CVV</label>
           <div className="cvv-container">
             <input
-              className='input_small'
-              type={showCvv ? 'text' : 'password'}
+              className="input_small"
+              type={showCvv ? "text" : "password"}
               id="cvv"
               value={cvv}
               onChange={handleInputChange}
-              onFocus={() => handleInputFocus('cvv')}
+              onFocus={() => handleInputFocus("cvv")}
               required
             />
             <button

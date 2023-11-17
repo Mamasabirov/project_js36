@@ -3,11 +3,13 @@ import Icon from "../components/icon/Icon";
 import Catalog from "../components/catalog/Catalog";
 import CartButton from "../components/cartButton/CartButton";
 
+import BasketZero from "../components/Basket/BasketZero";
 const HomePage = () => {
   return (
     <div>
       <Icon />
       <Catalog />
+      {/* <BasketZero /> */}
     </div>
   );
 };

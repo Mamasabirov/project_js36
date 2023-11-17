@@ -37,7 +37,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 200px;
 }
 
 .footer-links {
@@ -81,7 +80,7 @@
 }
 
 .footer-images img {
-  width: 30px; 
+  width: 30px;
   height: auto;
   margin: 0 0.5rem;
 }

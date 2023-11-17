@@ -21,13 +21,13 @@ export default function Catalog() {
   React.useEffect(() => {
     setCategoryToNavigate(false);
   }, []);
-  React.useEffect(()=>{
-    Aos.init({duration:1500})
-  },[])
+  React.useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
-    <div data-aos="fade-up"
+    <div
+      data-aos="fade-up"
       style={{
-        backgroundImage: "url(" + bacgCatalog + ")",
         backgroundSize: "cover",
         overflow: "hidden",
         display: "flex",
@@ -126,7 +126,6 @@ export default function Catalog() {
       </>
       <>
         <Card
-
           sx={{
             maxWidth: 345,
             backgroundColor: "black",

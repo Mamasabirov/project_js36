@@ -8,7 +8,7 @@ import tema from "../../assets/cotalog.jpg";
 
 const EditProduct = () => {
   const { saveChanges, oneProduct, getOneProduct } = useProducts();
-
+  const [error, setError] = useState(false)
   const [product, setProduct] = useState({
     title: "",
     description: "",
@@ -95,12 +95,17 @@ const EditProduct = () => {
             borderRadius: "15px",
           }}
           onClick={() => {
+            if(!product.title || !product.description || !product.category || !product.image || !product.price){
+                setError(true)
+                return
+               }
             saveChanges(id, product);
             navigate("/products");
           }}
         >
-          Save changes
+          Сохранить
         </Button>
+        {error ? (<p style={{color: "red"}}>Заполните поля чтобы сохранить изменения</p>) : ("")}
       </Box>
     </div>
   );

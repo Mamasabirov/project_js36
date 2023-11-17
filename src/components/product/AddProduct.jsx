@@ -13,6 +13,8 @@ const AddProduct = () => {
         image: '',
         price: ''
     })
+    const[error, setError] = useState(false)
+   
     const navigate = useNavigate()
     const handleInput = (e) => {
     if (e.target.name === 'price') {
@@ -23,16 +25,21 @@ const AddProduct = () => {
       setProduct(obj);
     }
     }
-  
     return (
         <Box sx={{ width: '50vw', height: 400, margin: '20px auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <TextField onChange={handleInput} name='title' label="Title" fullWidth variant="outlined" />
             <TextField onChange={handleInput} name='description' label="Description" fullWidth variant="outlined" />
             <CategorySelect product={product} handleInput={handleInput}/>
             <TextField onChange={handleInput} name='image' label="Image URL" fullWidth variant="outlined" />
-            <TextField onChange={handleInput} name='price' label="Price" fullWidth variant="outlined" />
-            <Button onClick={()=>{ addProduct(product)
-            navigate('/products')}}>Add Product</Button>
+            <TextField onChange={handleInput} type='number' name='price' label="Price" fullWidth variant="outlined" />
+            <Button onClick={()=>{
+               if(!product.title || !product.description || !product.category || !product.image || !product.price){
+                setError(true)
+                return
+               }
+              addProduct(product)
+            navigate('/products')}}>Добавить продукт</Button>
+            {error ? (<p>Заполните поля чтобы добавить продукт</p>) : ("")}
         </Box>
     );
 };

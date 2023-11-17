@@ -31,7 +31,6 @@ export default function CategorySelectBar() {
     setSearchParams({
       q: search,
     })
-   
   }, [search]);
   return (
       <AppBar sx={{backgroundColor: 'black', color: 'white'}} position='sticky'>

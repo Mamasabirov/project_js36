@@ -9,6 +9,7 @@ import AuthPage from "../pages/AuthPage";
 import { ADMIN } from "../helpers/consts";
 import { useAuth } from "../contexts/AuthContextProvider";
 import CartPage from "../components/product/CartPage";
+import PaymentForm from "../components/product/PaymentForm";
 
 const PUBLIC_ROUTES = [
   { id: 1, link: "/", element: <HomePage /> },
@@ -18,6 +19,7 @@ const PUBLIC_ROUTES = [
   { id: 5, link: "/edit/:id", element: <EditPage /> },
   { id: 6, link: "/cart", element: <CartPage /> },
   { id: 7, link: "/auth", element: <AuthPage /> },
+  { id: 8, link: "/pay", element: <PaymentForm/> }
 ];
 
 const PRIVATE_ROUTES = [{ id: 5, link: "/add", element: <AddPage /> }];

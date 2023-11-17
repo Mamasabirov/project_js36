@@ -14,8 +14,8 @@ const styles = {
   backgroundImage: "url(" + mapsBcg + ")",
   backgroundSize: "auto",
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "center right",
-  border: "2px solid #000",
+  backgroundPosition: "310px 60px",
+  border: "0px solid #000",
   borderRadius: "20px",
   boxShadow: 24,
   p: 4,
@@ -56,6 +56,9 @@ export default function Detail({
             </p>
             <p style={{ font: "italic small-caps bold 16px cursive" }}>
               category: {category}
+            </p>
+            <p style={{ font: "italic small-caps bold 16px cursive" }}>
+              price: {price} сом
             </p>
           </div>
           <div

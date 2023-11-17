@@ -12,7 +12,6 @@ import watch from "../assets/watch.jpg";
 import "./Catalog.css";
 import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
-import bacgCatalog from "../../assets/cotalog.jpg";
 
 export default function Catalog() {
   const navigate = useNavigate();
@@ -23,7 +22,6 @@ export default function Catalog() {
   return (
     <div
       style={{
-        backgroundImage: "url(" + bacgCatalog + ")",
         backgroundSize: "cover",
         overflow: "hidden",
         display: "flex",

@@ -6,7 +6,6 @@ import chip from '../assets/chip.png';
 import nfc from '../assets/nfc.png';
 import ConfettiButton from './ConfettiButton';
 
-
 const PaymentForm = () => {
   const [cardName, setCardName] = useState('Card name');
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
@@ -14,6 +13,9 @@ const PaymentForm = () => {
   const [cvv, setCvv] = useState('000');
   const [showCvv, setShowCvv] = useState(false);
   const [formFilled, setFormFilled] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setFormFilled(isFormFilled());
@@ -32,10 +34,10 @@ const PaymentForm = () => {
 
   const isFormFilled = () => {
     return (
-      cardName.trim() !== '' &&
-      cardNumber.trim() !== '' &&
-      expiryDate.trim() !== '' &&
-      cvv.trim() !== ''
+      cardName.trim() !== 'Card name' &&
+      cardNumber.replace(/\s/g, '').length === 16 &&
+      expiryDate.replace(/\D/g, '').length === 4 &&
+      cvv.replace(/\D/g, '').length === 3
     );
   };
 
@@ -117,8 +119,14 @@ const PaymentForm = () => {
     if (isFormFilled()) {
       console.log('Данные формы:', { cardName, cardNumber, expiryDate, cvv });
       setFormFilled(true);
+      setErrorMessage(''); // Очищаем сообщение об ошибке
+      setShowConfetti(true); // Показываем конфетти после успешной отправки
+      setError(false); // Сбрасываем состояние ошибки
     } else {
       setFormFilled(false);
+      setErrorMessage('Пожалуйста, заполните все поля формы.');
+      setShowConfetti(false); // Скрываем конфетти при ошибке
+      setError(true); // Устанавливаем состояние ошибки
     }
   };
 
@@ -200,8 +208,9 @@ const PaymentForm = () => {
               {showCvv ? <FaEyeSlash /> : <FaEye />}
             </button>
           </div>
-          {!formFilled && <p>Пожалуйста, введите данные во все поля.</p>}
-          <ConfettiButton showConfetti={formFilled} style={{ marginTop: '10px' }}/>         
+          {/* Показываем ConfettiButton всегда, но конфетти выпускается только после успешной отправки формы */}
+          <ConfettiButton showConfetti={showConfetti} style={{ marginTop: '10px' }} />
+          {error && <p style={{ color: 'red' }}>{errorMessage}</p>}
         </div>
       </form>
     </div>

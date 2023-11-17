@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import shop from "../../components/assets/shopping-bag.png";
 import { Box } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const BasketZero = () => {
   return (
@@ -37,20 +38,27 @@ const BasketZero = () => {
             display: "flex",
           }}
         >
-          <button
-            style={{
-              width: "50px",
-              height: "50px",
-              background: "transparent",
-              border: "thick double pink",
-              borderRadius: "15px",
-              color: "white",
-              font: "small-caps bold 24px/1 sans-serif",
-              fontSize: "24px",
-            }}
-          >
-            X
-          </button>
+          <Link to="/">
+            <button
+              style={{
+                width: "50px",
+                height: "50px",
+                background: "transparent",
+                border: "thick double pink",
+                borderRadius: "15px",
+                color: "white",
+                font: "small-caps bold 24px/1 sans-serif",
+                fontSize: "24px",
+                cursor: "pointer",
+                transition: "transform 0.3s ease-in-out", 
+                "&:hover": {
+                  transform: "scale(3)",
+                },
+              }}
+            >
+              X
+            </button>
+          </Link>
         </div>
 
         <div
@@ -76,7 +84,7 @@ const BasketZero = () => {
           <p>Корзина пустая :(</p>
 
           <p style={{ marginTop: "35px", marginBottom: "35px" }}>
-            Чтобы добавить товар в корзину зайдите страницу каталог
+            Чтобы добавить товар в корзину, зайдите на страницу каталога
           </p>
         </div>
         <div
@@ -95,17 +103,23 @@ const BasketZero = () => {
             borderRadius: "14px",
           }}
         >
-          <button
-            style={{
-              color: "white",
-              backgroundColor: "rgb(54, 171, 39)",
-              fontSize: "21px",
-              border: "none",
-            }}
-            type="batton"
-          >
-            Посмотреть каталог
-          </button>
+          <Link to="/products" style={{ textDecoration: "none", color: "white" }}>
+            <button
+              style={{
+                color: "white",
+                backgroundColor: "rgb(54, 171, 39)",
+                fontSize: "21px",
+                border: "none",
+                cursor: "pointer",
+                ":hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+              type="button"
+            >
+              Посмотреть каталог
+            </button>
+          </Link>
         </div>
       </div>
     </Box>
@@ -113,3 +127,4 @@ const BasketZero = () => {
 };
 
 export default BasketZero;
+

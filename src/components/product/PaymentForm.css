@@ -3,9 +3,10 @@
   --primary-dark: #4f46f8;
   --secondary: #17c9ff;
   --greyLight-1: #e0ecf7;
-  --greyLight-2: #c8dbf0;
+  --greyLight-2: #a4bfde;
   --greyDark-1: #92acc4;
   --greyDark-2: #5a768f;
+  --greyDark-3: #143f68;
 }
 
 *, *::before, *::after {
@@ -25,13 +26,13 @@
   width: 40%; 
   height: 400px;
   border-radius: 12.8px; 
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.457);
   display: grid;
   grid-template-columns: 500px; 
   padding: 4rem 6rem;
   grid-gap: 4rem;
-  left: 50px;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.642);
   
 }
 
@@ -50,6 +51,8 @@
   border: 1px solid #ffffff;
   z-index: 200;
   position: relative;
+  right: 40px;
+  bottom: 20px;
 }
 
 .card__number {
@@ -121,11 +124,13 @@
 }
 
 label {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   pointer-events: none;
-  font-size: 22.4px; 
+  font-size: 22.4px;
+  font-weight: 700; 
   padding: 0 0 9.6px 0; 
   line-height: 1;
-  color: var(--greyDark-1);
+  color: var(--greyDark-3);
 }
 
 .input_big {
@@ -134,12 +139,13 @@ label {
   background: transparent;
   border-radius: 9.6px;
   border: 1px solid var(--greyLight-2);
-  color: var(--greyLight-1);
+  color: var(--greyLight-2);
   font-family: inherit;
   font-size: 22.4px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.642);
 
   &::placeholder {
-    color: var(--greyLight-1);
+    color: var(--greyLight-2);
     font-size: inherit;
     letter-spacing: 1.92px;
     opacity: 0.7;  
@@ -149,7 +155,7 @@ label {
   &:focus {
     outline: none;
     border: 2px solid #3498db;
-    color: var(--greyDark-6); 
+    color: var(--greyDark-2); 
   }
 }
 
@@ -160,14 +166,15 @@ label {
   background: transparent;
   border-radius: 9.6px;
   border: 1px solid var(--greyLight-2);
-  color: var(--greyLight-1);
+  color: var(--greyLight-2);
   font-family: inherit;
   font-size: 16px; 
   width: 20%;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.642);
 
   &::placeholder {
-    color: var(--greyLight-1);
+    color: var(--greyLight-2);
     font-size: inherit;
     letter-spacing: 1.92px;
     opacity: 0.7;
@@ -280,5 +287,10 @@ label {
   margin-left: 8px;
   vertical-align: middle;
   animation: spin 0.7s linear infinite;
+}
+
+
+.confetti-button {
+  margin-top: 10px; 
 }
 

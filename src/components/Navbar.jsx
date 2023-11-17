@@ -8,18 +8,16 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonIcon from "@mui/icons-material/Person";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css";
-import { useAuth } from "../contexts/AuthContextProvider";
-import { ADMIN } from "../helpers/consts";
-import { useCart } from "../contexts/CartContextProvider";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useAuth } from "../contexts/AuthContextProvider";
+import { useCart } from "../contexts/CartContextProvider";
 import navbarBacg from "../assets/dt.jpg";
+import { ADMIN } from "../helpers/consts";
 
 const pages = [
   { id: 1, title: "Каталог", link: "/products" },
@@ -38,6 +36,7 @@ function Navbar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const { getProductsCountInCart, addProductToCart } = useCart();
   const [badgeCount, setBadgeCount] = React.useState(0);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     setBadgeCount(getProductsCountInCart());
@@ -46,6 +45,7 @@ function Navbar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -138,6 +138,7 @@ function Navbar() {
               ) : null}
             </Menu>
           </Box>
+
           <Typography
             variant="h5"
             noWrap
@@ -156,6 +157,7 @@ function Navbar() {
           >
             LOGO
           </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Link
@@ -206,7 +208,14 @@ function Navbar() {
                   marginTop: "20px",
                   marginRight: "10px",
                 }}
-                to={"/cart"}
+                to={badgeCount === 0 ? "/basket" : "/cart"}
+                onClick={() => {
+                  if (badgeCount === 0) {
+                    navigate("/basket");
+                  } else {
+                    navigate("/cart");
+                  }
+                }}
               >
                 <Badge badgeContent={badgeCount} color="success">
                   <ShoppingCartIcon sx={{ color: "black" }} />
@@ -214,6 +223,7 @@ function Navbar() {
               </Link>
             )}
           </Box>
+
           <Typography sx={{ color: "black" }}>
             {email
               ? `Добро пожаловать, ${
@@ -222,6 +232,7 @@ function Navbar() {
                 }!`
               : "Здравствуйте, Гость!"}
           </Typography>
+
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -277,4 +288,5 @@ function Navbar() {
     </AppBar>
   );
 }
+
 export default Navbar;

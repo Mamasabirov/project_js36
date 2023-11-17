@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 export default function Cart() {
   const { cart, getCart, changeProductCount, deleteProductFromCart } =
     useCart();
+    
 
   React.useEffect(() => {
     getCart();
@@ -48,7 +49,7 @@ export default function Cart() {
               </TableCell>
               <TableCell align="right">{row.item.title}</TableCell>
               <TableCell align="right">{row.item.category}</TableCell>
-              <TableCell align="right">{row.item.price}</TableCell>
+              <TableCell align="right">{row.item.price} сом</TableCell>
               <TableCell align="right">
                 <input
                   onChange={(e) =>
@@ -60,7 +61,7 @@ export default function Cart() {
                   max={20}
                 />
               </TableCell>
-              <TableCell align="right">{row.subPrice}</TableCell>
+              <TableCell align="right">{row.subPrice} сом</TableCell>
               <TableCell align="right">
                 <Button onClick={() => deleteProductFromCart(row.item.id)}>
                   DELETE
@@ -73,7 +74,7 @@ export default function Cart() {
               <strong>Итого:</strong>
             </TableCell>
             <TableCell align="right">
-              <strong>{cart.totalPrice}</strong>
+              <strong>{cart.totalPrice} сом</strong>
             </TableCell>
             <TableCell align="right">
               <Link to="/pay">

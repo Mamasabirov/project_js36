@@ -11,6 +11,7 @@ import { useAuth } from "../contexts/AuthContextProvider";
 import CartPage from "../components/product/CartPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import PaymentForm from "../components/product/PaymentForm";
+import BasketZero from "../components/Basket/BasketZero";
 
 const PUBLIC_ROUTES = [
   { id: 1, link: "/", element: <HomePage /> },
@@ -21,7 +22,8 @@ const PUBLIC_ROUTES = [
   { id: 6, link: "/cart", element: <CartPage /> },
   { id: 7, link: "/auth", element: <AuthPage /> },
   { id: 8, link: "/aboutus", element: <AboutUsPage /> },
-  { id: 9, link: "/pay", element: <PaymentForm/> }
+  { id: 9, link: "/pay", element: <PaymentForm /> },
+  { id: 10, link: "/basket", element: <BasketZero /> },
 ];
 
 const PRIVATE_ROUTES = [{ id: 5, link: "/add", element: <AddPage /> }];

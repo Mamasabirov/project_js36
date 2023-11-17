@@ -11,6 +11,7 @@ import { ADMIN } from "../../helpers/consts";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import Detail from "./Detail";
 import { useCart } from "../../contexts/CartContextProvider";
+import CartButton from "../cartButton/CartButton";
 
 export default function ProductCard({ item }) {
   const {
@@ -50,15 +51,7 @@ export default function ProductCard({ item }) {
             <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
           </>
         ) : (
-          <IconButton
-            sx={{
-              backgroundColor: checkProductInCart(item.id) ? "black" : "",
-              color: checkProductInCart(item.id) ? "white" : "",
-            }}
-            onClick={() => addProductToCart(item)}
-          >
-            <AddShoppingCartIcon />
-          </IconButton>
+         <CartButton addProductToCart={addProductToCart} checkProductInCart={checkProductInCart} item={item}/>
         )}
       </CardActions>
       <Detail

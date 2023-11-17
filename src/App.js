@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import MainRoutes from "./routes/MainRoutes";
 import "./App.css";
 import Footer from "./components/Footer";
+import Aos from "aos";
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <div style={{marginTop: 'auto'}}>
         <Footer />
       </div>
-      
+
     </div>
   );
 };

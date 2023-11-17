@@ -4,7 +4,6 @@ import React from "react";
 import autor from "../assets/authorised.jpg";
 import "./ContactPage.css"; // Create a CSS file for ContactPage styling
 
-
 const ContactPage = () => {
   return (
     <div className="contact-page-container">

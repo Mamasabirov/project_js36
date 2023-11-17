@@ -12,6 +12,8 @@ import watch from "../assets/watch.jpg";
 import "./Catalog.css";
 import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
+import bacgCatalog from "../../assets/cotalog.jpg";
+import Aos from "aos";
 
 export default function Catalog() {
   const navigate = useNavigate();
@@ -19,8 +21,12 @@ export default function Catalog() {
   React.useEffect(() => {
     setCategoryToNavigate(false);
   }, []);
+  React.useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <div
+      data-aos="fade-up"
       style={{
         backgroundSize: "cover",
         overflow: "hidden",

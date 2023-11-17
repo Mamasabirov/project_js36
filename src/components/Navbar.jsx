@@ -19,6 +19,7 @@ import { ADMIN } from "../helpers/consts";
 import { useCart } from "../contexts/CartContextProvider";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import navbarBacg from "../assets/dt.jpg";
 
 const pages = [
   { id: 1, title: "Каталог", link: "/products" },
@@ -58,7 +59,14 @@ function Navbar() {
   };
 
   return (
-    <AppBar sx={{ backgroundColor: "white" }} position="static">
+    <AppBar
+      sx={{
+        backgroundImage: "url(" + navbarBacg + ")",
+        backgroundSize: "cover",
+        overflow: "hidden",
+      }}
+      position="static"
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to={"/"}>
@@ -192,13 +200,19 @@ function Navbar() {
                 </Button>
               </Link>
             ) : (
-              <Link style={{marginLeft: "auto", marginTop: "20px", marginRight:'10px'}} to={"/cart"}>
-              <Badge badgeContent={badgeCount} color="success">
-                <ShoppingCartIcon sx={{ color: "black"  }} />
-              </Badge>
-            </Link>
+              <Link
+                style={{
+                  marginLeft: "auto",
+                  marginTop: "20px",
+                  marginRight: "10px",
+                }}
+                to={"/cart"}
+              >
+                <Badge badgeContent={badgeCount} color="success">
+                  <ShoppingCartIcon sx={{ color: "black" }} />
+                </Badge>
+              </Link>
             )}
-            
           </Box>
           <Typography sx={{ color: "black" }}>
             {email

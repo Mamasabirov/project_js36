@@ -7,13 +7,11 @@ import Select from "@mui/material/Select";
 import { useSearchParams } from "react-router-dom";
 
 export default function CategorySelect({ handleInput, product }) {
-  const [category, setCategory] = React.useState("");
-
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">
-          {product ? product.category : "Choose category"}
+          {product.category != "" ? product.category : "Choose category"}
         </InputLabel>
         <Select
           labelId="demo-simple-select-label"

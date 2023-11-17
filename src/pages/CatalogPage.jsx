@@ -8,7 +8,6 @@ const CatalogPage = () => {
         <div>
             <CategorySelectBar/>
             <ProductList/>
-            <ConfettiButton/>
         </div>
     );
 };

@@ -12,19 +12,24 @@ import watch from "../assets/watch.jpg";
 import "./Catalog.css";
 import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
+import bacgCatalog from "../../assets/cotalog.jpg";
 
 export default function Catalog() {
-  const navigate = useNavigate()
-  const {setCategoryToNavigate} = useProducts()
-  React.useEffect(()=>{
-    setCategoryToNavigate(false)
-  },[])
+  const navigate = useNavigate();
+  const { setCategoryToNavigate } = useProducts();
+  React.useEffect(() => {
+    setCategoryToNavigate(false);
+  }, []);
   return (
     <div
       style={{
+        backgroundImage: "url(" + bacgCatalog + ")",
+        backgroundSize: "cover",
+        overflow: "hidden",
         display: "flex",
         justifyContent: "center",
-        margin: "30px",
+        margin: "0px",
+        padding: "0px",
       }}
     >
       <Card
@@ -64,9 +69,7 @@ export default function Catalog() {
             size="small"
             sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
             className="button"
-            onClick={()=>
-              navigate(`products?q=&category=Телефоны`)
-            }
+            onClick={() => navigate(`products?q=&category=Телефоны`)}
           >
             Выбрать
           </Button>
@@ -110,9 +113,7 @@ export default function Catalog() {
               size="small"
               sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
               className="button"
-              onClick={()=>
-              navigate(`products?q=&category=Ноутбуки`)
-            }
+              onClick={() => navigate(`products?q=&category=Ноутбуки`)}
             >
               Выбрать
             </Button>
@@ -158,9 +159,7 @@ export default function Catalog() {
               size="small"
               sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
               className="button"
-              onClick={()=>
-              navigate(`products?q=&category=Аксессуары`)
-            }
+              onClick={() => navigate(`products?q=&category=Аксессуары`)}
             >
               Выбрать
             </Button>
@@ -206,9 +205,7 @@ export default function Catalog() {
               size="small"
               sx={{ backgroundColor: "#007bff", color: "#ffffff" }}
               className="button"
-              onClick={()=>
-              navigate(`products?q=&category=Планшеты`)
-            }
+              onClick={() => navigate(`products?q=&category=Планшеты`)}
             >
               Выбрать
             </Button>

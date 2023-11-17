@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
+import bacgIcon from "../../assets/cotalog.jpg";
 
 const Icon = () => {
   return (
@@ -130,7 +131,9 @@ const iconCheckListStyles = {
 };
 
 const newBackgrounds = {
-  backgroundColor: "WhiteSmoke",
+  backgroundImage: "url(" + bacgIcon + ")",
+  backgroundSize: "cover",
+  overflow: "hidden",
   padding: 0,
   margin: 0,
 };

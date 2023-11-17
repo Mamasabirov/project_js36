@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { useProducts } from '../../contexts/ProductContextProvider';
-import ProductCard from './ProductCard';
-import { Box } from '@mui/system';
-import { useSearchParams } from 'react-router-dom';
-import PaginationControlled from './Pagination';
+import React, { useEffect, useState } from "react";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import ProductCard from "./ProductCard";
+import { Box } from "@mui/system";
+import { useSearchParams } from "react-router-dom";
+import PaginationControlled from "./Pagination";
 
 const ProductList = () => {
-    const {getProducts, products} = useProducts()
-    const [searchParams, setSearchParams] = useSearchParams()
+  const { getProducts, products } = useProducts();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-    useEffect(() => {
-        getProducts()
-    }, [searchParams])
-    // Pagination
-    const [page, setPage] = React.useState(1);
+  useEffect(() => {
+    getProducts();
+  }, [searchParams]);
+  // Pagination
+  const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
   };
@@ -27,19 +27,27 @@ const ProductList = () => {
 
     return products.slice(begin, end);
   }
-  
-    return (
-        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', width: '80%', margin: 'auto'}}>
-            {currentData().map((item) =>          
-                  <ProductCard key={item.id} item={item}/>
-            )}
-            <PaginationControlled 
-            count = {count}
-            page={page}
-            handleChange={handleChange}
-            />
-        </Box>
-    );
+
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        width: "80%",
+        margin: "auto",
+      }}
+    >
+      {currentData().map((item) => (
+        <ProductCard key={item.id} item={item} />
+      ))}
+      <PaginationControlled
+        count={count}
+        page={page}
+        handleChange={handleChange}
+      />
+    </Box>
+  );
 };
 
 export default ProductList;

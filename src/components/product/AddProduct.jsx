@@ -39,7 +39,7 @@ const AddProduct = () => {
                }
               addProduct(product)
             navigate('/products')}}>Добавить продукт</Button>
-            {error ? (<p>Заполните поля чтобы добавить продукт</p>) : ("")}
+            {error ? (<p style={{color: "red"}}>Заполните поля чтобы добавить продукт</p>) : ("")}
         </Box>
     );
 };

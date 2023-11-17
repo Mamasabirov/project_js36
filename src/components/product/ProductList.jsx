@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 import { Box } from "@mui/system";
 import { useSearchParams } from "react-router-dom";
 import PaginationControlled from "./Pagination";
+import Aos from "aos";
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
@@ -12,6 +13,11 @@ const ProductList = () => {
   useEffect(() => {
     getProducts();
   }, [searchParams]);
+
+  useEffect(()=>{
+    Aos.init({duration:2000})
+    Aos.refresh()
+  }, [])
   // Pagination
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
@@ -30,6 +36,7 @@ const ProductList = () => {
 
   return (
     <Box
+      data-aos="fade-in"
       sx={{
         display: "flex",
         flexWrap: "wrap",

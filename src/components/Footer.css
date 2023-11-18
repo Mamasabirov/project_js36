@@ -69,9 +69,41 @@
   text-decoration: none;
   color: #fff;
 }
+.link-1:hover {
+  color: orange;
+  transition: 0.2s;
+}
 .link-2 {
   text-decoration: none;
   color: #fff;
+}
+.link-2:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.link-3:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.link-4:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.link-5:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.link-6:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.link-7:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.link-8:hover {
+  color: orange;
+  transition: 0.2s;
 }
 .footer-images {
   display: flex;
@@ -83,4 +115,16 @@
   width: 30px;
   height: auto;
   margin: 0 0.5rem;
+}
+.cat-1:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.cat-2:hover {
+  color: orange;
+  transition: 0.2s;
+}
+.cat-3:hover {
+  color: orange;
+  transition: 0.2s;
 }

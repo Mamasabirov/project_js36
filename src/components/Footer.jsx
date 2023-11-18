@@ -22,9 +22,9 @@ const Footer = () => {
         <div className="link-group">
           <h3>Категории</h3>
           <ul>
-            <li>Товары</li>
-            <li>Бренды</li>
-            <li>Предложения</li>
+            <li className="cat-1">Товары</li>
+            <li className="cat-2">Бренды</li>
+            <li className="cat-3">Предложения</li>
           </ul>
         </div>
 
@@ -42,24 +42,24 @@ const Footer = () => {
                 Контакты
               </a>{" "}
             </li>
-            <li>Локации</li>
+            <li className="link-3">Локации</li>
           </ul>
         </div>
 
         <div className="link-group">
           <h3>Полезные ссылки</h3>
           <ul>
-            <li>Каталог</li>
-            <li>Контактная информация</li>
+            <li className="link-4">Каталог</li>
+            <li className="link-5">Контактная информация</li>
           </ul>
         </div>
 
         <div className="link-group">
           <h3>Клиентам</h3>
           <ul>
-            <li>Для корпоративных клиентов</li>
-            <li>Для образования</li>
-            <li>Сертификаты</li>
+            <li className="link-6">Для корпоративных клиентов</li>
+            <li className="link-7">Для образования</li>
+            <li className="link-8">Сертификаты</li>
           </ul>
         </div>
       </div>

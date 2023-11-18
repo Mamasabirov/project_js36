@@ -3,9 +3,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
+import { Button, CardActionArea, CardActions} from "@mui/material";
 import { useProducts } from "../../contexts/ProductContextProvider";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useNavigate } from "react-router";
 import { ADMIN } from "../../helpers/consts";
 import { useAuth } from "../../contexts/AuthContextProvider";
@@ -47,8 +46,8 @@ export default function ProductCard({ item }) {
       <CardActions>
         {email === ADMIN ? (
           <>
-            <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
-            <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
+            <Button className="btn-nav" sx={{ backgroundColor: 'black', color: 'white'}} onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
+            <Button className="btn-nav" sx={{ backgroundColor: 'black', color: 'white'}} onClick={() => deleteProduct(item.id)}>Delete</Button>
           </>
         ) : (
          <CartButton addProductToCart={addProductToCart} checkProductInCart={checkProductInCart} item={item}/>

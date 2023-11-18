@@ -1,7 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { Button } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
+import SimpleRating from "./SimpleRating"; 
 import { useCart } from "../../contexts/CartContextProvider";
 import mapsBcg from "../../assets/ll.jpg";
 
@@ -14,7 +15,7 @@ const styles = {
   backgroundImage: "url(" + mapsBcg + ")",
   backgroundSize: "auto",
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "310px 60px",
+  backgroundPosition: "390px 20px",
   border: "0px solid #000",
   borderRadius: "20px",
   boxShadow: 24,
@@ -35,6 +36,16 @@ export default function Detail({
 }) {
   const { checkProductInCart, addProductToCart } = useCart();
 
+  const [localRating, setLocalRating] = React.useState(() => {
+    const storedRating = localStorage.getItem("localRating");
+    return storedRating ? parseFloat(storedRating) : 0;
+  });
+
+  const handleRatingChange = (newValue) => {
+    console.log("Рейтинг изменен:", newValue);
+    setLocalRating(newValue);
+  };
+
   return (
     <div>
       <Modal
@@ -43,7 +54,7 @@ export default function Detail({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={styles}>
+        <Box key={localRating} sx={styles}>
           <div>
             <img width={300} src={image} alt="" />
           </div>
@@ -60,6 +71,13 @@ export default function Detail({
             <p style={{ font: "italic small-caps bold 16px cursive" }}>
               price: {price} сом
             </p>
+            <Typography component="legend">Рейтинг товара:</Typography>
+            <Stack spacing={1} margin="8px 0">  
+              <SimpleRating
+                initialRating={localRating}
+                onRatingChange={handleRatingChange}
+              />
+            </Stack>
           </div>
           <div
             style={{

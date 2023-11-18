@@ -34,7 +34,8 @@ const PaymentForm = () => {
 
   const isFormFilled = () => {
     return (
-      cardName.trim() !== 'Card name' &&
+      cardName !== '' &&
+      cardName !== 'Card name' &&
       cardNumber.replace(/\s/g, '').length === 16 &&
       expiryDate.replace(/\D/g, '').length === 4 &&
       cvv.replace(/\D/g, '').length === 3
@@ -45,8 +46,8 @@ const PaymentForm = () => {
     const { id, value } = e.target;
     let sanitizedValue = "";
     switch (id) {
-      case "name":
-        sanitizedValue = value.replace(/[^a-zA-Zа-яА-Я]/g, "");
+      case "name":        
+        sanitizedValue = value.replace(/[^a-zA-Zа-яА-Я\s]/g, "");
         setCardName(sanitizedValue);
         break;
       case "number":
@@ -119,16 +120,17 @@ const PaymentForm = () => {
     if (isFormFilled()) {
       console.log("Данные формы:", { cardName, cardNumber, expiryDate, cvv });
       setFormFilled(true);
-      setErrorMessage(''); // Очищаем сообщение об ошибке
-      setShowConfetti(true); // Показываем конфетти после успешной отправки
-      setError(false); // Сбрасываем состояние ошибки
+      setErrorMessage('');
+      setShowConfetti(true); 
+      setError(false); 
     } else {
       setFormFilled(false);
       setErrorMessage('Пожалуйста, заполните все поля формы.');
-      setShowConfetti(false); // Скрываем конфетти при ошибке
-      setError(true); // Устанавливаем состояние ошибки
+      setShowConfetti(false); 
+      setError(true); 
     }
   };
+  
 
   return (
     <div className="container">
@@ -208,7 +210,6 @@ const PaymentForm = () => {
               {showCvv ? <FaEyeSlash /> : <FaEye />}
             </button>
           </div>
-          {/* Показываем ConfettiButton всегда, но конфетти выпускается только после успешной отправки формы */}
           <ConfettiButton showConfetti={showConfetti} style={{ marginTop: '10px' }} />
           {error && <p style={{ color: 'red' }}>{errorMessage}</p>}
         </div>

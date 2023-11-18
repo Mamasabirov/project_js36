@@ -7,11 +7,12 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useCart } from "../../contexts/CartContextProvider";
-import { Button, TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Cart() {
-  const { cart, getCart, changeProductCount, deleteProductFromCart } =
+  const navigate = useNavigate();
+  const { cart, getCart, changeProductCount, deleteProductFromCart, returnProductToCatalog } =
     useCart();
     
 
@@ -23,6 +24,9 @@ export default function Cart() {
     localStorage.removeItem("cart");
     getCart();
   };
+
+  
+
 
   return (
     <TableContainer component={Paper}>
@@ -64,7 +68,7 @@ export default function Cart() {
               <TableCell align="right">{row.subPrice} сом</TableCell>
               <TableCell align="right">
                 <Button onClick={() => deleteProductFromCart(row.item.id)}>
-                  DELETE
+                  Удалить
                 </Button>
               </TableCell>
             </TableRow>

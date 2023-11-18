@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .payment {
@@ -134,7 +135,7 @@ label {
 }
 
 .input_big {
-  padding: 20px 18px; 
+  padding: 20px 24px; 
   border: none;
   background: transparent;
   border-radius: 9.6px;
@@ -143,6 +144,7 @@ label {
   font-family: inherit;
   font-size: 22.4px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.642);
+  width: 80%;
 
   &::placeholder {
     color: var(--greyLight-2);

@@ -47,8 +47,8 @@ export default function ProductCard({ item }) {
       <CardActions>
         {email === ADMIN ? (
           <>
-            <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
-            <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
+            <Button className="btn-nav" sx={{ backgroundColor: 'black', color: 'white'}} onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
+            <Button className="btn-nav" sx={{ backgroundColor: 'black', color: 'white'}} onClick={() => deleteProduct(item.id)}>Delete</Button>
           </>
         ) : (
          <CartButton addProductToCart={addProductToCart} checkProductInCart={checkProductInCart} item={item}/>

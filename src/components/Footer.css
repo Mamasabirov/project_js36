@@ -65,46 +65,37 @@
   margin-bottom: 0.5rem;
 }
 
-.link-1 {
+.link-1,
+.link-2,
+.link-3,
+.link-4,
+.link-5,
+.link-6,
+.link-7,
+.link-8,
+.cat-1,
+.cat-2,
+.cat-3 {
   text-decoration: none;
   color: #fff;
+  cursor: pointer; 
 }
-.link-1:hover {
+
+.link-1:hover,
+.link-2:hover,
+.link-3:hover,
+.link-4:hover,
+.link-5:hover,
+.link-6:hover,
+.link-7:hover,
+.link-8:hover,
+.cat-1:hover,
+.cat-2:hover,
+.cat-3:hover {
   color: orange;
   transition: 0.2s;
 }
-.link-2 {
-  text-decoration: none;
-  color: #fff;
-}
-.link-2:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.link-3:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.link-4:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.link-5:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.link-6:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.link-7:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.link-8:hover {
-  color: orange;
-  transition: 0.2s;
-}
+
 .footer-images {
   display: flex;
   justify-content: center;
@@ -116,15 +107,4 @@
   height: auto;
   margin: 0 0.5rem;
 }
-.cat-1:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.cat-2:hover {
-  color: orange;
-  transition: 0.2s;
-}
-.cat-3:hover {
-  color: orange;
-  transition: 0.2s;
-}
+

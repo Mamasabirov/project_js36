@@ -41,38 +41,38 @@ const CartContextProvider = ({ children }) => {
           totalPrice: 0,
         })
       );
-      // перезаписываем переменную cart c null на объект
+      
       cart = {
         products: [],
         totalPrice: 0,
       };
     }
-    // обновляем состояние
+   
     dispatch({ type: ACTIONS.GET_CART, payload: cart });
   };
-  // функция для добавления товара в корзину
+ 
   const addProductToCart = (product) => {
-    // получаем содержимое из хранилища под ключом cart
+  
     let cart = getLocalStorage();
 
-    // проверка на существование данных в хранилище под ключом cart
+ 
     if (!cart) {
       cart = { products: [], totalPrice: 0 };
     }
 
-    // создаем объект, который добавим в localstorage в массив cart.products
+
     let newProduct = {
       item: product,
       count: 1,
       subPrice: +product.price,
     };
 
-    // проверяем есть ли уже продукт, который хотим добавить в корзину
+ 
     let productToFind = cart.products.filter(
       (elem) => elem.item.id === product.id
     );
 
-    // если товар уже добавлен в корзину, то удаляем его из массива cart.products через фильтр, в противном случае добавляем его в cart.products
+   
     if (productToFind.length === 0) {
       cart.products.push(newProduct);
     } else {
@@ -81,16 +81,16 @@ const CartContextProvider = ({ children }) => {
       );
     }
 
-    // пересчитываем totalPrice
+   
     cart.totalPrice = calcTotalPrice(cart.products);
 
-    //обновляем данные в localstorage
+    
     localStorage.setItem("cart", JSON.stringify(cart));
-    // обновляем состояние
+
     dispatch({ type: ACTIONS.GET_CART, payload: cart });
   };
 
-  // функция для проверки на наличие товара в корзине
+ 
   const checkProductInCart = (id) => {
     let cart = getLocalStorage();
 
@@ -100,11 +100,11 @@ const CartContextProvider = ({ children }) => {
     }
   };
 
-  // функция для изменения кол-ва товаров в корзине
+ 
   const changeProductCount = (id, count) => {
-    // получаем данные корзины из local storage
+   
     let cart = getLocalStorage();
-    //перебираем массив с продуктами из корзины, и у продукта,  у которого id совпадает с тем id, что передали при вызове, перезаписываем кол-во и subPrice
+  
     cart.products = cart.products.map((product) => {
       if (product.item.id === id) {
         product.count = count;
@@ -112,13 +112,13 @@ const CartContextProvider = ({ children }) => {
       }
       return product;
     });
-    // пересчитываем totalPrice, так как кол-во и subprice поменялись
+
     cart.totalPrice = calcTotalPrice(cart.products);
 
-    // помещаем в localStorage обновленные данные
+
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // обновляем состояние корзины
+
     dispatch({
       type: ACTIONS.GET_CART,
       payload: cart,
@@ -127,14 +127,14 @@ const CartContextProvider = ({ children }) => {
 
   const deleteProductFromCart = (id) => {
     let cart = getLocalStorage();
-    // фильтруем массив products, и оставляем только те продукты, у которых id не совпадает с id переданным при вызове функции
+   
     cart.products = cart.products.filter((elem) => elem.item.id !== id);
-    // пересчитываем totalPrice
+  
     cart.totalPrice = calcTotalPrice(cart.products);
 
-    // обновляем данные в хранилище
+   
     localStorage.setItem("cart", JSON.stringify(cart));
-    // обновляем состояние
+  
     dispatch({
       type: ACTIONS.GET_CART,
       payload: cart,
@@ -142,8 +142,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const cartCleaner = () => {
-    // Ваша логика очистки корзины
-    // Например:
+ 
     localStorage.removeItem("cart");
     dispatch({ type: ACTIONS.GET_CART, payload: { products: [], totalPrice: 0 } });
   };

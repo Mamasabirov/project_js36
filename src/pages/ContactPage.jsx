@@ -2,6 +2,7 @@ import React from "react";
 import autor from "../assets/authorised.jpg";
 import "./ContactPage.css"; 
 
+
 const ContactPage = () => {
   return (
     <div className="contact-page-container">
@@ -12,9 +13,9 @@ const ContactPage = () => {
           Asia Store – первый официальный авторизованный партнёр Apple в
           Кыргызстане со статусом Apple Authorised Reseller.
         </h2>
-
-        <button className="btn">Контактная информация</button>
-
+        <a href="/aboutus"><button className="btn">Контактная информация</button></a>
+        
+        
         <div className="paragraph-container">
           <p className="page-paragraph">
             В нашем магазине можно не только купить iPhone, компьютер Mac или

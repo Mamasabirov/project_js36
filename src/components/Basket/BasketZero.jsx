@@ -36,7 +36,6 @@ const BasketZero = () => {
             justifyContent: "end",
             marginTop: "10px",
             marginRight: "10px",
-            display: "flex",
           }}
         >
           <Link to="/">

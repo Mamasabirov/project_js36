@@ -1,0 +1,18 @@
+.buttonClick {
+  width: 30%;
+  color: white;
+  background-color: rgb(54, 171, 39);
+  font-size: 21px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 1s;
+  margin-left: 33%;
+}
+.buttonClick:hover {
+  background-color: rgb(6, 92, 19);
+  border-radius: 20px;
+}
+.buttonClick:active {
+  transform: initial;
+}

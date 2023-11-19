@@ -2,7 +2,7 @@
   "products": [
     {
       "title": "Iphone 13 pro",
-      "description": "256gb, Золотой",
+      "description": "128gb, Золотой",
       "category": "Телефоны",
       "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone13pro/210915120039015160-1200x1200.webp",
       "price": 88000,
@@ -79,14 +79,6 @@
       "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/gold/wwen_iphone14pro_q422_gold_pdp-images_position-1a-1200x1200.webp",
       "price": "",
       "id": 18
-    },
-    {
-      "title": "Iphone 14 pro",
-      "description": "1T, Серебристый",
-      "category": "Телефоны",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/silver/wwen_iphone14pro_q422_silver_pdp-images_position-1a-1200x1200.webp",
-      "price": "",
-      "id": 19
     },
     {
       "title": "Iphone 14 pro max",
@@ -455,6 +447,14 @@
       "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro1416m2promax/silver/mbp16-silver-select-202301-1200x1200.webp",
       "price": 326000,
       "id": 65
+    },
+    {
+      "title": "i phone",
+      "description": "лучший i phone",
+      "category": "Телефоны",
+      "image": "https://i5.walmartimages.com/seo/Restored-Apple-iPhone-12-Pro-Max-Carrier-Unlocked-128GB-Pacific-Blue-Refurbished_f9d15379-5d53-43b4-bd39-59b0ecfd6c61.f4407fa1c9c14af6b65fa66824337168.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+      "price": 98000,
+      "id": 66
     }
   ]
 }

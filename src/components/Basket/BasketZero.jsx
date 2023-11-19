@@ -2,6 +2,7 @@ import React from "react";
 import shop from "../../components/assets/shopping-bag.png";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
+import "./Basket.css";
 
 const BasketZero = () => {
   return (
@@ -50,9 +51,9 @@ const BasketZero = () => {
                 font: "small-caps bold 24px/1 sans-serif",
                 fontSize: "24px",
                 cursor: "pointer",
-                transition: "transform 0.3s ease-in-out", 
+                transition: "transform 0.3s ease-in-out",
                 "&:hover": {
-                  transform: "scale(3)",
+                  transform: "scale(" + 3 + ")",
                 },
               }}
             >
@@ -87,36 +88,12 @@ const BasketZero = () => {
             Чтобы добавить товар в корзину, зайдите на страницу каталога
           </p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            fontSize: "21px",
-            width: "35%",
-            font: "caption",
-            height: "15%",
-            backgroundColor: "rgb(54, 171, 39)",
-            color: "white",
-            margin: "auto",
-            borderRadius: "14px",
-          }}
-        >
-          <Link to="/products" style={{ textDecoration: "none", color: "white" }}>
-            <button
-              style={{
-                color: "white",
-                backgroundColor: "rgb(54, 171, 39)",
-                fontSize: "21px",
-                border: "none",
-                cursor: "pointer",
-                ":hover": {
-                  transform: "scale(1.1)",
-                },
-              }}
-              type="button"
-            >
+        <div className="hoverClick">
+          <Link
+            to="/products"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <button className="buttonClick" type="button">
               Посмотреть каталог
             </button>
           </Link>
@@ -127,4 +104,3 @@ const BasketZero = () => {
 };
 
 export default BasketZero;
-

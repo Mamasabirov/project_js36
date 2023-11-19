@@ -49,8 +49,8 @@ const Footer = () => {
         <div className="link-group">
           <h3>Полезные ссылки</h3>
           <ul>
-            <li className="link-4">Каталог</li>
-            <li className="link-5">Контактная информация</li>
+            <li ><a className="link-4" href="/products">Каталог</a></li>
+            <li ><a className="link-5" href="/contact">Контактная информация</a></li>
           </ul>
         </div>
 

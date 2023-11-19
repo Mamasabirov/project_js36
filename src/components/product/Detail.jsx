@@ -71,7 +71,7 @@ export default function Detail({
             <p style={{ font: "italic small-caps bold 16px cursive" }}>
               price: {price} сом
             </p>
-            <Typography component="legend">Рейтинг товара:</Typography>
+            <Typography  component="legend">Рейтинг товара:</Typography>
             <Stack spacing={1} margin="8px 0">  
               <SimpleRating
                 initialRating={localRating}

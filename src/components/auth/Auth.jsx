@@ -51,9 +51,9 @@ export default function Auth() {
   const { cartCleaner } = useCart();
 
   React.useEffect(() => {
-    // Очистить корзину при монтировании компонента
+   
     cartCleaner();
-  }, []); // Пустой массив зависимостей означает, что эффект выполнится только при монтировании
+  }, []); 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -72,12 +72,12 @@ export default function Auth() {
 
   const handleLoginSubmit = async () => {
     await handleLogin();
-    cartCleaner(); // Очистить корзину после успешного входа
+    cartCleaner(); 
   };
 
   const handleRegisterSubmit = async () => {
     await handleRegister();
-    cartCleaner(); // Очистить корзину после успешной регистрации
+    cartCleaner(); 
   };
 
   

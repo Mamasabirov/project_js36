@@ -14,6 +14,8 @@ const AuthContextProvider = ({ children }) => {
   const [passwordError, setPasswordError] = useState('');
   const [hasAccount, setHasAccount] = useState('');
 
+  
+
 
   const clearInputs = () => {
     setEmail('');
@@ -30,6 +32,7 @@ const AuthContextProvider = ({ children }) => {
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
+      .then(() => navigate('/'))
       .catch((err) => {
         switch (err.code) {
           case 'auth/email-already-in-use':
@@ -90,10 +93,6 @@ const AuthContextProvider = ({ children }) => {
         authListener();
     }, [])
 
-
-  useEffect(() => {
-    authListener();
-  }, []);
 
   const values = {
     user,

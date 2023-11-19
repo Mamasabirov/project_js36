@@ -18,6 +18,7 @@ import { useAuth } from "../contexts/AuthContextProvider";
 import { useCart } from "../contexts/CartContextProvider";
 import navbarBacg from "../assets/dt.jpg";
 import { ADMIN } from "../helpers/consts";
+import "./Navbar.css";
 
 const pages = [
   { id: 1, title: "Каталог", link: "/products" },

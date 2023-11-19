@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import PersonIcon from "@mui/icons-material/Person";
+import { useCart } from "../../contexts/CartContextProvider";
 
 function Copyright(props) {
   return (
@@ -47,6 +48,13 @@ export default function Auth() {
     handleLogin,
   } = useAuth();
 
+  const { cartCleaner } = useCart();
+
+  React.useEffect(() => {
+    // Очистить корзину при монтировании компонента
+    cartCleaner();
+  }, []); // Пустой массив зависимостей означает, что эффект выполнится только при монтировании
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -61,6 +69,18 @@ export default function Auth() {
   const toggleForm = () => {
     setShowLoginForm((prev) => !prev);
   };
+
+  const handleLoginSubmit = async () => {
+    await handleLogin();
+    cartCleaner(); // Очистить корзину после успешного входа
+  };
+
+  const handleRegisterSubmit = async () => {
+    await handleRegister();
+    cartCleaner(); // Очистить корзину после успешной регистрации
+  };
+
+  
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -129,7 +149,7 @@ export default function Auth() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={handleLogin}
+                onClick={handleLoginSubmit}
               >
                 Войти
               </Button>
@@ -139,7 +159,7 @@ export default function Auth() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={handleRegister}
+                onClick={handleRegisterSubmit}
               >
                 Регистрация
               </Button>

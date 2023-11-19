@@ -141,12 +141,20 @@ const CartContextProvider = ({ children }) => {
     });
   };
 
+  const cartCleaner = () => {
+    // Ваша логика очистки корзины
+    // Например:
+    localStorage.removeItem("cart");
+    dispatch({ type: ACTIONS.GET_CART, payload: { products: [], totalPrice: 0 } });
+  };
+
   const values = {
     getCart,
     cart: state.cart,
     addProductToCart,
     checkProductInCart,
     changeProductCount,
+    cartCleaner,
     deleteProductFromCart,
     getProductsCountInCart,
   };

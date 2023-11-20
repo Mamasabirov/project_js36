@@ -1,5 +1,8 @@
 import { Box } from "@mui/system";
 import React from "react";
+import './Icon.css'
+
+
 
 const Icon = () => {
   return (
@@ -142,5 +145,7 @@ const iconTextListStyles = {
   color: "black",
   marginBottom: "2%",
 };
+
+
 
 export default Icon;

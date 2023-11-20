@@ -26,6 +26,7 @@ export default function Catalog() {
   }, []);
   return (
     <div
+      className="catalog-container"
       data-aos="fade-up"
       style={{
         backgroundSize: "cover",
@@ -37,6 +38,7 @@ export default function Catalog() {
       }}
     >
       <Card
+        className="card_catalog"
         sx={{
           maxWidth: 345,
           backgroundColor: "black",
@@ -55,6 +57,7 @@ export default function Catalog() {
             Сноска ⁵
           </Typography>
           <CardMedia
+            className="CardMedia"
             sx={{
               height: 300,
               borderRadius: "8px",
@@ -81,6 +84,7 @@ export default function Catalog() {
       </Card>
       <>
         <Card
+          className="card_catalog"
           sx={{
             maxWidth: 345,
             backgroundColor: "black",
@@ -99,6 +103,7 @@ export default function Catalog() {
               наушников, порт MagSafe 3 Клавиатура Magic
             </Typography>
             <CardMedia
+              className="CardMedia"
               sx={{
                 height: 300,
                 borderRadius: "8px",
@@ -126,6 +131,7 @@ export default function Catalog() {
       </>
       <>
         <Card
+          className="card_catalog"
           sx={{
             maxWidth: 345,
             backgroundColor: "black",
@@ -143,10 +149,10 @@ export default function Catalog() {
               обеспечению чистоты поставщиков Apple Энергетическая программа
             </Typography>
             <CardMedia
+              className="CardMedia"
               sx={{
                 marginTop: 2,
-                width: 300,
-                height: 330,
+                height: 300,
                 borderRadius: "8px",
                 cursor: "pointer",
                 transition: "transform 0.2s",
@@ -172,6 +178,7 @@ export default function Catalog() {
       </>
       <>
         <Card
+          className="card_catalog"
           sx={{
             maxWidth: 345,
             backgroundColor: "black",
@@ -189,10 +196,10 @@ export default function Catalog() {
               технологиям.
             </Typography>
             <CardMedia
+              className="CardMedia"
               sx={{
                 marginTop: 2,
-                width: 300,
-                height: 330,
+                height: 300,
                 borderRadius: "8px",
                 cursor: "pointer",
                 transition: "transform 0.2s",

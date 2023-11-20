@@ -156,10 +156,10 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+          
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none",  md: "flex" }}}>
             {pages.map((page) => (
               <Link
                 style={{ textDecoration: "none" }}
@@ -225,7 +225,7 @@ function Navbar() {
             )}
           </Box>
 
-          <Typography sx={{ color: "black" }}>
+          <Typography sx={{ color: "black", fontSize: {xs: "12px",  sm: "14px", md: "16px" },}}>
             {email
               ? `Добро пожаловать, ${
                   email.split("@")[0].charAt(0).toUpperCase() +

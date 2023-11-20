@@ -55,7 +55,29 @@
     text-align: left;
   }
   
+  @media (max-width: 430px) {
+    .autor-image {
+      width: 308px;
+      height: 210px;
+      margin: auto;
+      margin-bottom: 1rem;
+  }
+    .page-title {
+      font-size: 18px;
+    }
+  }
 
+  @media (max-width: 340px) {
+    .autor-image {
+      width: 258px;
+      height: 140px;
+      margin: auto;
+      margin-bottom: 1rem;
+  }
+  .page-title {
+    font-size: 14px;
+  }
+  }
   
   
   

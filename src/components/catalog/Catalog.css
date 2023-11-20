@@ -45,3 +45,49 @@
   filter: blur(20px);
   transform: scale(1.1);
 }
+
+
+@media (max-width: 1440px) {
+  .MuiCard-root {
+    width: 100%;
+  }
+  .CardMedia {
+      height: 200px;
+    }
+  
+}
+
+@media (max-width: 1340px) {
+  .MuiCard-root {
+    width: 90%;
+  }
+  .CardMedia {
+      height: 150px;
+    }
+  
+}
+
+@media (max-width: 1024px) {
+  .CardMedia {
+    width: 100%;
+    height: auto;
+  }
+  .catalog-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+  
+}
+
+@media (max-width: 880px) {
+  .CardMedia {
+    width: 100%;
+    height: auto;
+  }
+  .catalog-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}

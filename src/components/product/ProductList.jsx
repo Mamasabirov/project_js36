@@ -41,12 +41,12 @@ const ProductList = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-between",
-        width: "80%",
+        width: { xs: "100%", md: "80%" },
         margin: "auto",
       }}
     >
       {currentData().map((item) => (
-        <ProductCard key={item.id} item={item} />
+        <ProductCard key={item.id} item={item} sx={{ width: { xs: "100%", sm: "48%", md: "30%" } }}/>
       ))}
       <PaginationControlled
         count={count}
